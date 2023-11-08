@@ -20,8 +20,16 @@ public class OdontologoService {
         return odontologoiDao.guardar(odontologo);
     }
 
-    public Odontologo buscarOdontologo(Integer id){
+    public Odontologo buscarPorID(Integer id){
         return odontologoiDao.buscar(id);
+    }
+
+    public Odontologo buscarPorMatricula(String matricula){
+        return odontologoiDao.buscarPorString(matricula);
+    }
+
+    public void actualizarOdontologo(Odontologo odontologo){
+        odontologoiDao.actualizar(odontologo);
     }
 
     public List<Odontologo> listarOdontologos(){
