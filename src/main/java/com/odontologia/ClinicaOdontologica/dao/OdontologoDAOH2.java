@@ -24,7 +24,7 @@ public class OdontologoDAOH2 implements iDao<Odontologo>{
             connection = BD.getConnection();
 
             PreparedStatement psInsert= connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
-            psInsert.setInt(1, odontologo.getMatricula());
+            psInsert.setString(1, odontologo.getMatricula());
             psInsert.setString(2,odontologo.getNombre());
             psInsert.setString(3, odontologo.getApellido());
 
@@ -67,12 +67,12 @@ public class OdontologoDAOH2 implements iDao<Odontologo>{
             while (resultSet.next()){
                 odontologo = new Odontologo(
                         resultSet.getInt(1),
-                        resultSet.getInt(2),
+                        resultSet.getString(2),
                         resultSet.getString(3),
                         resultSet.getString(4)
                 );
+                logger.info("Se encontraron los datos");
             }
-            logger.info("Se encontraron los datos");
         }catch (Exception e){
             logger.error(e.getMessage());
         }finally {
@@ -116,7 +116,7 @@ public class OdontologoDAOH2 implements iDao<Odontologo>{
             connection= BD.getConnection();
 
             PreparedStatement psUpdate= connection.prepareStatement(SQL_UPDATE);
-            psUpdate.setInt(1, odontologo.getMatricula());
+            psUpdate.setString(1, odontologo.getMatricula());
             psUpdate.setString(2, odontologo.getNombre());
             psUpdate.setString(3,odontologo.getApellido());
             psUpdate.setInt(4,odontologo.getId());
@@ -153,13 +153,13 @@ public class OdontologoDAOH2 implements iDao<Odontologo>{
             while (resultSet.next()){
                 Odontologo odontologo = new Odontologo(
                         resultSet.getInt(1),
-                        resultSet.getInt(2),
+                        resultSet.getString(2),
                         resultSet.getString(3),
                         resultSet.getString(4)
                 );
                 odontologos.add(odontologo);
+                logger.info("Se trajeron todos los registros");
             }
-            logger.info("Se trajeron todos los registros");
         }catch (Exception e){
             logger.error(e.getMessage());
         }finally {
@@ -174,7 +174,36 @@ public class OdontologoDAOH2 implements iDao<Odontologo>{
 
     @Override
     public Odontologo buscarPorString(String valor) {
-        return null;
+        Connection connection = null;
+        Odontologo odontologo = null;
+        logger.info("Inicio las operaciones de busqueda de odontologo por matricula");
+        try{
+            connection = BD.getConnection();
+
+            PreparedStatement psSearch = connection.prepareStatement(SQL_SELECT_BY_MATRICULA);
+            psSearch.setString(1, valor);
+
+            ResultSet resultSet = psSearch.executeQuery();
+
+            while (resultSet.next()){
+                odontologo = new Odontologo(
+                        resultSet.getInt(1),
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getString(4)
+                );
+                logger.info("Se encontraron los datos");
+            }
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }finally {
+            try{
+                connection.close();
+            }catch (SQLException ex){
+                logger.error(ex.getMessage());
+            }
+        }
+        return odontologo;
     }
 
 }
