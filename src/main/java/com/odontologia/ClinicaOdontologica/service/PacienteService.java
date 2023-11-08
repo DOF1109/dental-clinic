@@ -15,11 +15,7 @@ public class PacienteService {
     public PacienteService() {
         pacienteiDao= new PacienteDAOH2();
     }
-    /* public PacienteService(iDao<Paciente> pacienteiDao) {
-        this.pacienteiDao = pacienteiDao;
-    }*/
 
-    //se generan manuales los metodos
     public Paciente guardarPaciente(Paciente paciente){
         return pacienteiDao.guardar(paciente);
     }

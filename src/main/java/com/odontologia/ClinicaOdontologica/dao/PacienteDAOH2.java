@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PacienteDAOH2 implements iDao<Paciente>{
-    private static final Logger logger= Logger.getLogger(PacienteDAOH2.class);
-    private static  final String SQL_INSERT="INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?)";
-    private static final String SQL_SELECT_ALL="SELECT * FROM PACIENTES";
-    private static final String SQL_SELECT_BY="SELECT * FROM PACIENTES WHERE ID=?";
-    private static final String SQL_SELECT_BY_EMAIL="SELECT * FROM PACIENTES WHERE EMAIL=?";
+    private static final Logger logger = Logger.getLogger(PacienteDAOH2.class);
+    private static  final String SQL_INSERT = "INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?)";
+    private static final String SQL_SELECT_ALL = "SELECT * FROM PACIENTES";
+    private static final String SQL_SELECT_BY = "SELECT * FROM PACIENTES WHERE ID=?";
+    private static final String SQL_SELECT_BY_EMAIL = "SELECT * FROM PACIENTES WHERE EMAIL=?";
     private static final String SQL_DELETE = "DELETE FROM PACIENTES WHERE ID=?";
-    private static final String SQL_UPDATE="UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, CEDULA=?, FECHA_INGRESO=?, DOMICILIO_ID=?, EMAIL=? WHERE ID =?";
+    private static final String SQL_UPDATE = "UPDATE PACIENTES SET NOMBRE=?, APELLIDO=?, CEDULA=?, FECHA_INGRESO=?, DOMICILIO_ID=?, EMAIL=? WHERE ID =?";
 
     @Override
     public Paciente guardar(Paciente paciente) {
@@ -57,7 +57,7 @@ public class PacienteDAOH2 implements iDao<Paciente>{
 
     @Override
     public Paciente buscar(Integer id) {
-        logger.info("Iniciando las operaciones de busqueda de paciente: ");
+        logger.info("Iniciando las operaciones de busqueda de paciente");
         Connection connection= null;
         Paciente paciente = null;
         try{
@@ -123,7 +123,7 @@ public class PacienteDAOH2 implements iDao<Paciente>{
 
     @Override
     public void actualizar(Paciente paciente) {
-        logger.info("Iniciando las operaciones de actualizacion de un paciente ");
+        logger.info("Iniciando las operaciones de actualizacion de un paciente");
         Connection connection= null;
         try{
             connection= BD.getConnection();
@@ -131,16 +131,17 @@ public class PacienteDAOH2 implements iDao<Paciente>{
             DomicilioDAOH2 daoAux= new DomicilioDAOH2();
             daoAux.actualizar(paciente.getDomicilio());
 
-            PreparedStatement ps_Update= connection.prepareStatement(SQL_UPDATE);
-            ps_Update.setString(1, paciente.getNombre());
-            ps_Update.setString(2, paciente.getApellido());
-            ps_Update.setString(3, paciente.getCedula());
-            ps_Update.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
-            ps_Update.setInt(5,paciente.getDomicilio().getId());
-            ps_Update.setString(6,paciente.getEmail());
-            ps_Update.setInt(7,paciente.getId());
+            PreparedStatement psUpdate= connection.prepareStatement(SQL_UPDATE);
+            psUpdate.setString(1, paciente.getNombre());
+            psUpdate.setString(2, paciente.getApellido());
+            psUpdate.setString(3, paciente.getCedula());
+            psUpdate.setDate(4,Date.valueOf(paciente.getFechaIngreso()));
+            psUpdate.setInt(5,paciente.getDomicilio().getId());
+            psUpdate.setString(6,paciente.getEmail());
+            psUpdate.setInt(7,paciente.getId());
 
-            ps_Update.execute();
+            psUpdate.execute();
+            logger.info("Paciente actualizado correctamente");
         }catch (Exception e){
             logger.error(e.getMessage());
         }finally {

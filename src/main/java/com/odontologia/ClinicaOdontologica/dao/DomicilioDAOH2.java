@@ -11,9 +11,11 @@ public class DomicilioDAOH2 implements iDao<Domicilio>{
     private static final String SQL_INSERT ="INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES (?,?,?,?)";
     private static final String SQL_SELECT_BY ="SELECT * FROM DOMICILIOS WHERE ID=?";
     private static final String SQL_DELETE = "DELETE FROM DOMICILIOS WHERE ID=?";
+    private static final String SQL_UPDATE = "UPDATE DOMICILIOS SET CALLE=?, NUMERO=?, LOCALIDAD=?, PROVINCIA=? WHERE ID=?";
 
     @Override
     public  Domicilio guardar(Domicilio domicilio) {
+        logger.info("Guardando domicilio del paciente");
         Connection connection = null;
         try{
             connection = BD.getConnection();
@@ -29,6 +31,7 @@ public class DomicilioDAOH2 implements iDao<Domicilio>{
             while (rs.next()){
                 domicilio.setId(rs.getInt(1));
             }
+            logger.info("Domicilio guardado");
         }catch (Exception e){
             logger.error(e.getMessage());
         }finally {
@@ -99,7 +102,29 @@ public class DomicilioDAOH2 implements iDao<Domicilio>{
 
     @Override
     public void actualizar(Domicilio domicilio) {
+        logger.info("Iniciando las operaciones de actualizacion de un domicilio");
+        Connection connection= null;
+        try{
+            connection= BD.getConnection();
 
+            PreparedStatement psUpdate= connection.prepareStatement(SQL_UPDATE);
+            psUpdate.setString(1, domicilio.getCalle());
+            psUpdate.setInt(2, domicilio.getNumero());
+            psUpdate.setString(3, domicilio.getLocalidad());
+            psUpdate.setString(4, domicilio.getProvincia());
+            psUpdate.setInt(5, domicilio.getId());
+
+            psUpdate.execute();
+            logger.info("Domicilio actualizado correctamente");
+        }catch (Exception e){
+            logger.error(e.getMessage());
+        }finally {
+            try{
+                connection.close();
+            }catch (SQLException ex){
+                logger.error(ex.getMessage());
+            }
+        }
     }
 
     @Override

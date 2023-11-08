@@ -3,9 +3,10 @@ package com.odontologia.ClinicaOdontologica.controller;
 import com.odontologia.ClinicaOdontologica.model.Paciente;
 import com.odontologia.ClinicaOdontologica.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/paciente")
@@ -26,6 +27,7 @@ public class PacienteController {
     public  Paciente registrarPaciente(@RequestBody Paciente paciente){
         return pacienteService.guardarPaciente(paciente);
     }
+
     @PutMapping
     public String actualizarPaciente(@RequestBody Paciente paciente){
         Paciente pacienteBuscado= pacienteService.buscarPorId(paciente.getId());
@@ -43,6 +45,21 @@ public class PacienteController {
         model.addAttribute("nombre",paciente.getNombre());
         model.addAttribute("apellido",paciente.getApellido());
         return "index";
+    }
+
+    @GetMapping("/listarPacientes")
+    public List<Paciente> listarPacientes(){
+        return pacienteService.listarPacientes();
+    }
+
+    @DeleteMapping("/{id}")
+    public String eliminarPaciente(@PathVariable Integer id){
+        Paciente pacienteBuscado = pacienteService.buscarPorId(id);
+        if (pacienteBuscado != null){
+            pacienteService.eliminarPaciente(id);
+            return "Paciente eliminado";
+        }
+        return "No se encontró el paciente";
     }
 
 }
