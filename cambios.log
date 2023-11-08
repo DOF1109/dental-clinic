@@ -1,0 +1,17 @@
+[2023-11-07 20:55:24] [ WARN ] [BD:32] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/frias/C21023ClinicaOdontologica.mv.db" [90048-214]
+[2023-11-07 20:56:47] [ INFO ] [OdontologoDAOH2:20] Inicio las operaciones de guardado
+[2023-11-07 20:56:47] [ ERROR] [OdontologoDAOH2:37] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/frias/C21023ClinicaOdontologica.mv.db" [90048-214]
+[2023-11-07 20:58:38] [ WARN ] [BD:32] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/frias/C21023ClinicaOdontologica.mv.db" [90048-214]
+[2023-11-07 21:00:30] [ WARN ] [BD:32] La base de datos puede que ya esté siendo utilizada: "C:/Users/frias/C21023ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/frias/C21023ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-224]
+[2023-11-07 21:01:10] [ INFO ] [BD:29] datos cargados con exito
+[2023-11-07 21:02:12] [ INFO ] [BD:29] datos cargados con exito
+[2023-11-07 21:03:56] [ INFO ] [BD:29] datos cargados con exito
+[2023-11-07 21:06:46] [ INFO ] [BD:29] datos cargados con exito
+[2023-11-07 21:08:07] [ INFO ] [BD:29] datos cargados con exito
+[2023-11-07 21:08:57] [ INFO ] [BD:29] datos cargados con exito
+[2023-11-07 21:10:10] [ INFO ] [BD:29] datos cargados con exito
+[2023-11-07 21:32:42] [ INFO ] [BD:29] datos cargados con exito
