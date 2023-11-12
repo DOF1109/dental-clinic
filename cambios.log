@@ -421,3 +421,336 @@ Database may be already in use: "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
 [2023-11-12 17:39:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
 [2023-11-12 17:39:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
 [2023-11-12 17:39:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:03] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:51:24] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:51:24] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:24] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:24] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:32] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:51:32] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:51:42] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:51:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:43] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:51:43] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:51:43] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:51:43] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:51:48] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:51:48] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:48] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:48] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:49] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:51:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:50] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:51:50] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:50] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:50] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:51] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:51:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:51:52] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:51:52] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:51:58] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:51:58] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:51:58] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:51:58] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:52:01] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:52:01] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:01] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:01] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:03] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:52:03] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:03] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:03] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:04] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:52:04] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:04] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:04] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:05] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:52:05] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:05] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:05] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:06] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:52:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:52:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:58:57] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:59:14] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:59:14] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:59:14] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:59:14] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:01:54] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:02:12] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:02:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:16] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:02:16] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:02:27] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:02:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:27] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:02:27] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:02:27] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:02:27] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:02:34] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:02:34] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:02:38] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:02:38] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:02:38] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:02:38] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:02:39] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:02:39] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:39] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:39] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:48] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:02:48] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:02:53] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:02:53] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:02:53] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:02:53] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:02:55] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:02:55] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:55] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:02:55] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:06:44] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:06:59] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:06:59] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:06:59] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:06:59] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:07:02] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:07:02] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:07:07] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:07:07] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:07:07] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:07:07] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:07:07] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:07:07] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:07:07] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:07:07] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:07:14] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:07:14] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:07:32] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:07:32] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:07:32] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:07:32] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:07:42] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:07:42] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:07:42] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:07:42] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:09:34] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:09:44] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:09:44] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:09:44] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:09:44] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:09:46] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:09:46] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:09:51] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:09:52] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:09:52] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:09:52] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:09:52] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:09:52] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:09:52] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:09:52] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:09:55] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:09:55] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:10:01] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:10:01] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:10:01] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:10:01] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:10:08] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:10:09] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:10:09] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:10:09] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:15] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:13:27] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:13:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:29] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:13:29] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:29] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:29] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:30] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:13:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:31] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:13:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:31] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:13:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:32] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:13:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:33] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:13:33] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:13:39] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:13:39] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:13:39] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:13:39] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:13:43] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:13:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:13:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:10] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:14:18] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:14:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:19] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:14:19] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:19] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:19] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:20] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:14:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:22] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:14:22] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:14:27] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:14:27] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:14:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:27] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:14:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:27] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:14:27] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:27] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:14:35] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:14:35] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:14:44] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:14:44] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:14:44] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:44] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:14:44] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:14:44] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:44] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:44] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:14:52] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:14:52] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:14:57] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:14:57] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:14:57] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:14:57] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:14:57] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:57] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:14:57] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:14:57] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:15:30] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:15:30] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:15:37] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:15:37] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:15:38] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:15:38] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:18:16] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:18:30] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:18:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:18:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:18:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:18:33] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:18:33] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:18:43] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:18:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:18:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:18:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:18:43] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:18:43] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:18:43] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:18:43] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:19:01] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:19:01] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:19:07] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:19:08] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:19:08] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:08] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:19:08] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:08] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:08] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:19:08] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:19:18] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:19:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:20] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:19:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:21] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:19:21] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:21] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:21] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:22] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:19:22] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:22] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:19:22] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:03] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:20:14] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:20:14] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:14] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:14] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:15] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:20:15] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:20:21] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:20:21] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:21] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:21] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:21] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:20:21] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:20:21] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:20:21] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:20:26] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:20:26] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:20:32] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:20:32] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:20:32] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:20:32] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:20:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:20:32] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:21:22] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:21:30] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:21:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:21:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:21:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:21:43] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:22:23] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:22:36] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:22:36] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:22:36] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:22:36] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:22:49] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:22:49] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:22:56] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:22:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:22:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:22:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:22:56] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:22:56] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:22:56] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:22:56] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 18:23:07] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:23:07] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:23:09] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:23:09] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:23:55] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 18:24:06] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 18:24:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:24:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:24:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 18:24:08] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:24:08] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:24:13] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 18:24:13] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 18:24:13] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 18:24:13] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
