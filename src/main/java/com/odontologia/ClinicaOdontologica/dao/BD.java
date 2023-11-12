@@ -15,9 +15,10 @@ public class BD {
             "DROP TABLE IF EXISTS DOMICILIOS; CREATE TABLE DOMICILIOS (ID INT AUTO_INCREMENT PRIMARY KEY, CALLE VARCHAR(100) NOT NULL, " +
             "NUMERO INT NOT NULL, LOCALIDAD VARCHAR(100) NOT NULL, PROVINCIA VARCHAR(100) NOT NULL);" +
             "DROP TABLE IF EXISTS ODONTOLOGOS; CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, " +
-            "MATRICULA INT NOT NULL, NOMBRE VARCHAR(50) NOT NULL, APELLIDO VARCHAR(50) NOT NULL);";
+            "MATRICULA VARCHAR(50) NOT NULL, NOMBRE VARCHAR(50) NOT NULL, APELLIDO VARCHAR(50) NOT NULL);";
     private static final String SQL_PRUEBA="INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES('Jorgito','Pereyra','11111','2023-10-27','1','jorgito@jorgito.com'),('Paola','Viloria','22222','2023-10-15','2','paola@paola.com'),('Ignacio','Freilij','33333','2023-10-20','3','ignacio@gmail.com'); " +
-            "INSERT INTO DOMICILIOS(CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES('Siempre viva','742','Sprinfield','Usa'),('Av.Colon','1600','Cordoba','Cordoba'),('Av. 9 de Julio','1200','Caba','Bs As')";
+            "INSERT INTO DOMICILIOS(CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES('Siempre viva','742','Sprinfield','Usa'),('Av.Colon','1600','Cordoba','Cordoba'),('Av. 9 de Julio','1200','Caba','Bs As');" +
+            " INSERT INTO ODONTOLOGOS(MATRICULA, NOMBRE, APELLIDO) VALUES('MP10','Fabricio','Lopez'),('MPA20','Santiago','Rodriguez'),('MN30','Elizabeth','Castro')";
 
     public static void crearTabla(){
         Connection connection = null;

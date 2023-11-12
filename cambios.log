@@ -176,3 +176,248 @@ Database may be already in use: "C:/Users/ariel/C21023ClinicaOdontologica.mv.db"
 [2023-11-09 08:39:44] [ INFO ] [PacienteDAOH2:160] Iniciando las operaciones de listado de los pacientes 
 [2023-11-09 08:39:44] [ ERROR] [PacienteDAOH2:185] La base de datos puede que ya esté siendo utilizada: "C:/Users/ariel/C21023ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
 Database may be already in use: "C:/Users/ariel/C21023ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+[2023-11-10 20:16:00] [ WARN ] [BD:32] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/frias/C21023ClinicaOdontologica.mv.db" [90048-214]
+[2023-11-10 20:16:20] [ WARN ] [BD:32] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/frias/C21023ClinicaOdontologica.mv.db" [90048-214]
+[2023-11-10 20:20:08] [ WARN ] [BD:32] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/frias/C21023ClinicaOdontologica.mv.db" [90048-214]
+[2023-11-10 20:23:40] [ WARN ] [BD:32] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/frias/C21023ClinicaOdontologica.mv.db" [90048-214]
+[2023-11-10 20:24:26] [ WARN ] [BD:32] Versión del archivo de base de datos no soportada ó encabezado de archivo invalido en archivo "C:/Users/frias/C21023ClinicaOdontologica.mv.db"
+Unsupported database file version or invalid file header in file "C:/Users/frias/C21023ClinicaOdontologica.mv.db" [90048-214]
+[2023-11-10 20:28:26] [ INFO ] [BD:30] Datos cargados con exito
+[2023-11-10 20:34:45] [ INFO ] [BD:30] Datos cargados con exito
+[2023-11-10 20:36:31] [ INFO ] [BD:30] Datos cargados con exito
+[2023-11-10 20:40:34] [ INFO ] [BD:30] Datos cargados con exito
+[2023-11-10 21:01:49] [ INFO ] [BD:30] Datos cargados con exito
+[2023-11-10 21:02:31] [ INFO ] [OdontologoDAOH2:22] Inicio las operaciones de guardado de odontologo
+[2023-11-10 21:02:31] [ INFO ] [OdontologoDAOH2:37] Se guardaron correctamente los datos
+[2023-11-12 16:41:46] [ WARN ] [BD:33] Error de Sintaxis en sentencia SQL "INSERT INTO DOMICILIOS(CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES('Siempre viva','742','Sprinfield','Usa'),('Av.Colon','1600','Cordoba','Cordoba'),('Av. 9 de Julio','1200','Caba','Bs As')[*]INSERT INTO ODONTOLOGOS(MATRICULA, NOMBRE, APELLIDO) VALUES('MP10','Fabricio','Lopez'),('MPA20','Santiago','Rodriguez'),('MN30','Elizabeth','Castro')"
+Syntax error in SQL statement "INSERT INTO DOMICILIOS(CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES('Siempre viva','742','Sprinfield','Usa'),('Av.Colon','1600','Cordoba','Cordoba'),('Av. 9 de Julio','1200','Caba','Bs As')[*]INSERT INTO ODONTOLOGOS(MATRICULA, NOMBRE, APELLIDO) VALUES('MP10','Fabricio','Lopez'),('MPA20','Santiago','Rodriguez'),('MN30','Elizabeth','Castro')"; SQL statement:
+INSERT INTO DOMICILIOS(CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES('Siempre viva','742','Sprinfield','Usa'),('Av.Colon','1600','Cordoba','Cordoba'),('Av. 9 de Julio','1200','Caba','Bs As')INSERT INTO ODONTOLOGOS(MATRICULA, NOMBRE, APELLIDO) VALUES('MP10','Fabricio','Lopez'),('MPA20','Santiago','Rodriguez'),('MN30','Elizabeth','Castro') [42000-214]
+[2023-11-12 16:42:17] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:42:17] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:42:28] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:42:28] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:42:29] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:42:29] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:42:30] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:42:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:42:31] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:42:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:44:34] [ WARN ] [BD:33] Error de Sintaxis en sentencia SQL "INSERT INTO DOMICILIOS(CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES('Siempre viva','742','Sprinfield','Usa'),('Av.Colon','1600','Cordoba','Cordoba'),('Av. 9 de Julio','1200','Caba','Bs As')[*]INSERT INTO ODONTOLOGOS(MATRICULA, NOMBRE, APELLIDO) VALUES('MP10','Fabricio','Lopez'),('MPA20','Santiago','Rodriguez'),('MN30','Elizabeth','Castro')"
+Syntax error in SQL statement "INSERT INTO DOMICILIOS(CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES('Siempre viva','742','Sprinfield','Usa'),('Av.Colon','1600','Cordoba','Cordoba'),('Av. 9 de Julio','1200','Caba','Bs As')[*]INSERT INTO ODONTOLOGOS(MATRICULA, NOMBRE, APELLIDO) VALUES('MP10','Fabricio','Lopez'),('MPA20','Santiago','Rodriguez'),('MN30','Elizabeth','Castro')"; SQL statement:
+INSERT INTO DOMICILIOS(CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES('Siempre viva','742','Sprinfield','Usa'),('Av.Colon','1600','Cordoba','Cordoba'),('Av. 9 de Julio','1200','Caba','Bs As')INSERT INTO ODONTOLOGOS(MATRICULA, NOMBRE, APELLIDO) VALUES('MP10','Fabricio','Lopez'),('MPA20','Santiago','Rodriguez'),('MN30','Elizabeth','Castro') [42000-214]
+[2023-11-12 16:45:52] [ WARN ] [BD:33] Conversión de datos fallida, convirtiendo "'MP10' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"
+Data conversion error converting "'MP10' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES('Jorgito','Pereyra','11111','2023-10-27','1','jorgito@jorgito.com'),('Paola','Viloria','22222','2023-10-15','2','paola@paola.com'),('Ignacio','Freilij','33333','2023-10-20','3','ignacio@gmail.com') [22018-214]
+[2023-11-12 16:47:18] [ WARN ] [BD:33] Conversión de datos fallida, convirtiendo "'MP10' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"
+Data conversion error converting "'MP10' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES('Jorgito','Pereyra','11111','2023-10-27','1','jorgito@jorgito.com'),('Paola','Viloria','22222','2023-10-15','2','paola@paola.com'),('Ignacio','Freilij','33333','2023-10-20','3','ignacio@gmail.com') [22018-214]
+[2023-11-12 16:48:22] [ WARN ] [BD:33] Conversión de datos fallida, convirtiendo "'MP10' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"
+Data conversion error converting "'MP10' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES('Jorgito','Pereyra','11111','2023-10-27','1','jorgito@jorgito.com'),('Paola','Viloria','22222','2023-10-15','2','paola@paola.com'),('Ignacio','Freilij','33333','2023-10-20','3','ignacio@gmail.com') [22018-214]
+[2023-11-12 16:51:10] [ WARN ] [BD:33] Conversión de datos fallida, convirtiendo "'MP10' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"
+Data conversion error converting "'MP10' (ODONTOLOGOS: ""MATRICULA"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES('Jorgito','Pereyra','11111','2023-10-27','1','jorgito@jorgito.com'),('Paola','Viloria','22222','2023-10-15','2','paola@paola.com'),('Ignacio','Freilij','33333','2023-10-20','3','ignacio@gmail.com') [22018-214]
+[2023-11-12 16:51:52] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 16:52:12] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:52:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:52:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:52:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:52:18] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 16:52:18] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 16:52:31] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:52:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:52:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:52:31] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:52:31] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 16:52:31] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 16:52:31] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 16:52:31] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 16:55:15] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:55:15] [ ERROR] [OdontologoDAOH2:164] La base de datos puede que ya esté siendo utilizada: "C:/Users/frias/C21023ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/frias/C21023ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+[2023-11-12 16:55:32] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 16:55:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:55:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 16:55:32] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:09:14] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:09:35] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:09:35] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:09:35] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:09:35] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:11:57] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:12:11] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:12:11] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:12:11] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:12:11] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:12:23] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:12:23] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:12:30] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:12:30] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:12:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:12:30] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:12:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:12:30] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:12:30] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:12:30] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:14:43] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:14:56] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:14:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:14:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:14:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:16:17] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:16:17] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:29:23] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:29:37] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:29:38] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:29:38] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:29:38] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:29:42] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:29:42] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:29:48] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:29:48] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:29:48] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:29:48] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:29:48] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:29:48] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:29:48] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:29:48] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:30:10] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:30:10] [ ERROR] [OdontologoDAOH2:164] La base de datos puede que ya esté siendo utilizada: "C:/Users/frias/C21023ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/frias/C21023ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+[2023-11-12 17:30:13] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:30:13] [ ERROR] [OdontologoDAOH2:164] La base de datos puede que ya esté siendo utilizada: "C:/Users/frias/C21023ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
+Database may be already in use: "C:/Users/frias/C21023ClinicaOdontologica.mv.db". Possible solutions: close all other connection(s); use the server mode [90020-214]
+[2023-11-12 17:30:17] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:30:17] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:30:17] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:30:17] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:30:18] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:30:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:30:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:30:18] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:30:19] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:30:19] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:30:19] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:30:19] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:31:32] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:31:43] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:31:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:31:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:31:43] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:31:45] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:31:45] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:31:49] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:31:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:31:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:31:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:31:49] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:31:49] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:31:49] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:31:49] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:32:11] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:32:11] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:32:47] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:32:56] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:32:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:32:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:32:56] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:32:57] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:32:57] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:32:57] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:32:57] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:32:59] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:33:00] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:33:04] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:33:04] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:33:04] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:33:04] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:33:40] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:33:40] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:40] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:40] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:47] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:33:47] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:47] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:47] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:49] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:33:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:54] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:33:54] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:54] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:54] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:33:56] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:33:56] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:34:04] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:34:04] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:34:04] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:34:04] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:34:04] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:34:04] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:34:04] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:34:04] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:34:38] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:34:49] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:34:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:34:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:34:49] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:34:53] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:34:53] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:35:01] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:35:01] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:35:01] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:35:01] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:35:06] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:35:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:35:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:35:06] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:37:50] [ INFO ] [BD:31] Datos cargados con exito
+[2023-11-12 17:38:09] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:38:09] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:38:09] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:38:09] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:38:12] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:38:12] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:38:20] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:38:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:38:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:38:20] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:38:20] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:38:20] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:38:20] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:38:20] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:38:58] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:38:58] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:39:05] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:39:05] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:39:05] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:39:05] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:39:12] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:39:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:39:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:39:12] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:39:31] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:39:31] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:39:36] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:39:36] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:39:36] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:39:36] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:39:38] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:39:38] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:39:38] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:39:38] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:39:42] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:39:42] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:39:49] [ INFO ] [OdontologoDAOH2:54] Inicio las operaciones de busqueda de odontologo
+[2023-11-12 17:39:49] [ INFO ] [OdontologoDAOH2:74] Se encontraron los datos
+[2023-11-12 17:39:49] [ INFO ] [OdontologoDAOH2:113] Iniciando las operaciones de actualizacion un odontologo
+[2023-11-12 17:39:49] [ INFO ] [OdontologoDAOH2:125] Datos actualizados correctamente
+[2023-11-12 17:39:51] [ INFO ] [OdontologoDAOH2:141] Inicio las operaciones de traer todos los registros
+[2023-11-12 17:39:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:39:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
+[2023-11-12 17:39:51] [ INFO ] [OdontologoDAOH2:161] Se trajeron todos los registros
