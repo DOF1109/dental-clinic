@@ -1,39 +1,40 @@
 package com.odontologia.ClinicaOdontologica.service;
 
-import com.odontologia.ClinicaOdontologica.dao.OdontologoDAOH2;
-import com.odontologia.ClinicaOdontologica.dao.iDao;
-import com.odontologia.ClinicaOdontologica.model.Odontologo;
+import com.odontologia.ClinicaOdontologica.entity.Odontologo;
+import com.odontologia.ClinicaOdontologica.repository.OdontologoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OdontologoService {
-    // Relacion de asociacion que hay entre el service y el DAO correspondiente
-    private iDao<Odontologo> odontologoiDao;
-
-    public OdontologoService() {
-        odontologoiDao = new OdontologoDAOH2();
-    }
+    @Autowired
+    private OdontologoRepository odontologoRepository;
 
     public Odontologo guardarOdontologo(Odontologo odontologo){
-        return odontologoiDao.guardar(odontologo);
-    }
-
-    public Odontologo buscarPorID(Integer id){
-        return odontologoiDao.buscar(id);
-    }
-
-    public Odontologo buscarPorMatricula(String matricula){
-        return odontologoiDao.buscarPorString(matricula);
+        return odontologoRepository.save(odontologo);
     }
 
     public void actualizarOdontologo(Odontologo odontologo){
-        odontologoiDao.actualizar(odontologo);
+        odontologoRepository.save(odontologo);
+    }
+
+    public void eliminarOdontologo(Long id){
+        odontologoRepository.deleteById(id);
     }
 
     public List<Odontologo> listarOdontologos(){
-        return odontologoiDao.buscarTodos();
+        return odontologoRepository.findAll();
+    }
+
+    public Optional<Odontologo> buscarPorID(Long id){
+        return odontologoRepository.findById(id);
+    }
+
+    public Optional<Odontologo> buscarPorMatricula(String matricula){
+        return odontologoRepository.findByMatricula(matricula);
     }
 
 }

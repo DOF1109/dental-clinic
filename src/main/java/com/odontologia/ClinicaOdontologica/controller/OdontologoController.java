@@ -1,6 +1,6 @@
 package com.odontologia.ClinicaOdontologica.controller;
 
-import com.odontologia.ClinicaOdontologica.model.Odontologo;
+import com.odontologia.ClinicaOdontologica.entity.Odontologo;
 import com.odontologia.ClinicaOdontologica.service.OdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

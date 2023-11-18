@@ -2,7 +2,7 @@ package com.odontologia.ClinicaOdontologica.service;
 
 import com.odontologia.ClinicaOdontologica.dao.PacienteDAOH2;
 import com.odontologia.ClinicaOdontologica.dao.iDao;
-import com.odontologia.ClinicaOdontologica.model.Paciente;
+import com.odontologia.ClinicaOdontologica.entity.Paciente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

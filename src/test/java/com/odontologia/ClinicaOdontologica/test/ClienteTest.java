@@ -1,11 +1,7 @@
 package com.odontologia.ClinicaOdontologica.test;
 
-import com.odontologia.ClinicaOdontologica.model.Odontologo;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import com.odontologia.ClinicaOdontologica.service.OdontologoService;
-
-import java.util.List;
 
 public class ClienteTest {
     /***** Instancia del servicio con la implementacion de la BBDD a utilizar *****/
