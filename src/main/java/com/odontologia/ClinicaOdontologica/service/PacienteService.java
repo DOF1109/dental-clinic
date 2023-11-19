@@ -1,42 +1,39 @@
 package com.odontologia.ClinicaOdontologica.service;
 
-import com.odontologia.ClinicaOdontologica.dao.PacienteDAOH2;
-import com.odontologia.ClinicaOdontologica.dao.iDao;
 import com.odontologia.ClinicaOdontologica.entity.Paciente;
+import com.odontologia.ClinicaOdontologica.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PacienteService {
-    private iDao<Paciente> pacienteiDao;
     @Autowired
-    public PacienteService() {
-        pacienteiDao= new PacienteDAOH2();
+    private PacienteRepository pacienteRepository;
+
+    public Paciente registrarPaciente(Paciente paciente) {
+        return pacienteRepository.save(paciente);
     }
 
-    public Paciente guardarPaciente(Paciente paciente){
-        return pacienteiDao.guardar(paciente);
+    public void actualizarPaciente(Paciente paciente) {
+        pacienteRepository.save(paciente);
     }
 
-    public Paciente buscarPorId(Integer id){
-        return pacienteiDao.buscar(id);
+    public void eliminarPaciente(Long id) {
+        pacienteRepository.deleteById(id);
     }
 
-    public void eliminarPaciente(Integer id){
-        pacienteiDao.eliminar(id);
+    public Optional<Paciente> buscarPorId(Long id) {
+        return pacienteRepository.findById(id);
     }
 
-    public void actualizarPaciente(Paciente paciente){
-        pacienteiDao.actualizar(paciente);
+    public Optional<Paciente> buscarPorEmail(String email) {
+        return pacienteRepository.findByEmail(email);
     }
 
-    public List<Paciente> listarPacientes(){
-        return pacienteiDao.buscarTodos();
-    }
-
-    public Paciente buscarPorEmail(String correo){
-        return pacienteiDao.buscarPorString(correo);
+    public List<Paciente> listarPacientes() {
+        return pacienteRepository.findAll();
     }
 }

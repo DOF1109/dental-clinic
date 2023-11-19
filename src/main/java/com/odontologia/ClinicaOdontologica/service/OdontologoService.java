@@ -13,7 +13,7 @@ public class OdontologoService {
     @Autowired
     private OdontologoRepository odontologoRepository;
 
-    public Odontologo guardarOdontologo(Odontologo odontologo){
+    public Odontologo registrarOdontologo(Odontologo odontologo){
         return odontologoRepository.save(odontologo);
     }
 
