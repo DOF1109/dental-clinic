@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TurnoService {
@@ -27,4 +28,9 @@ public class TurnoService {
     public List<Turno> listarTurnos(){
         return turnoRepository.findAll();
     }
+
+    public Optional<Turno> buscarPoId(Long id){
+        return turnoRepository.findById(id);
+    }
+
 }

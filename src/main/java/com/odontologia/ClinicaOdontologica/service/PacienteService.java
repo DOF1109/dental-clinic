@@ -25,15 +25,15 @@ public class PacienteService {
         pacienteRepository.deleteById(id);
     }
 
+    public List<Paciente> listarPacientes() {
+        return pacienteRepository.findAll();
+    }
+
     public Optional<Paciente> buscarPorId(Long id) {
         return pacienteRepository.findById(id);
     }
 
     public Optional<Paciente> buscarPorEmail(String email) {
         return pacienteRepository.findByEmail(email);
-    }
-
-    public List<Paciente> listarPacientes() {
-        return pacienteRepository.findAll();
     }
 }

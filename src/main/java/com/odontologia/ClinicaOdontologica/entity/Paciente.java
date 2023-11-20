@@ -29,7 +29,7 @@ public class Paciente {
     @Column
     private LocalDate fechaIngreso;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
 

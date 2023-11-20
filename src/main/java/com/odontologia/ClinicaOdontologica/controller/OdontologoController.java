@@ -44,7 +44,7 @@ public class OdontologoController {
         return ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/busqueda/{matricula}")
+    @GetMapping("/buscar/{matricula}")
     public ResponseEntity<Optional<Odontologo>> buscarPorMatricula(@PathVariable String matricula){
         Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorMatricula(matricula);
         if(odontologoBuscado.isPresent()){

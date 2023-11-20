@@ -26,16 +26,4 @@ public class Domicilio {
     @Column
     private String provincia;
 
-    /*
-    @Override
-    public String toString() {
-        return "Domicilio{" +
-                "id=" + id +
-                ", calle='" + calle + '\'' +
-                ", numero=" + numero +
-                ", localidad='" + localidad + '\'' +
-                ", provincia='" + provincia + '\'' +
-                '}';
-    }
-     */
 }
