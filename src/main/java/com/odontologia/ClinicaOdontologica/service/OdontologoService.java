@@ -29,7 +29,7 @@ public class OdontologoService {
         return odontologoRepository.findAll();
     }
 
-    public Optional<Odontologo> buscarPorID(Long id){
+    public Optional<Odontologo> buscarPorId(Long id){
         return odontologoRepository.findById(id);
     }
 

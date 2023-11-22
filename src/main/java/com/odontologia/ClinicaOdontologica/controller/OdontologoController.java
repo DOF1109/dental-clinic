@@ -27,7 +27,7 @@ public class OdontologoController {
 
     @PutMapping
     public ResponseEntity<String> actualizarOdontologo(@RequestBody Odontologo odontologo){
-        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorID(odontologo.getId());
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(odontologo.getId());
         if(odontologoBuscado.isPresent()){
             odontologoService.actualizarOdontologo(odontologo);
             return ResponseEntity.ok("Odontologo actualizado");
@@ -37,7 +37,7 @@ public class OdontologoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Odontologo>> buscarPorID(@PathVariable Long id){
-        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorID(id);
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(id);
         if(odontologoBuscado.isPresent()){
             return ResponseEntity.ok(odontologoBuscado);
         }
@@ -55,7 +55,7 @@ public class OdontologoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarOdontologo(@PathVariable Long id){
-        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorID(id);
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(id);
         if(odontologoBuscado.isPresent()){
             odontologoService.eliminarOdontologo(id);
             return ResponseEntity.ok("Odontologo eliminado");

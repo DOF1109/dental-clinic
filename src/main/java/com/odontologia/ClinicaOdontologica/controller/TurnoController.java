@@ -1,6 +1,11 @@
 package com.odontologia.ClinicaOdontologica.controller;
 
+import com.odontologia.ClinicaOdontologica.dto.TurnoDTO;
+import com.odontologia.ClinicaOdontologica.entity.Odontologo;
+import com.odontologia.ClinicaOdontologica.entity.Paciente;
 import com.odontologia.ClinicaOdontologica.entity.Turno;
+import com.odontologia.ClinicaOdontologica.service.OdontologoService;
+import com.odontologia.ClinicaOdontologica.service.PacienteService;
 import com.odontologia.ClinicaOdontologica.service.TurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,16 +17,29 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/turno")
 public class TurnoController {
-    @Autowired
     private TurnoService turnoService;
+    private OdontologoService odontologoService;
+    private PacienteService pacienteService;
+
+    @Autowired
+    public TurnoController(TurnoService turnoService, OdontologoService odontologoService, PacienteService pacienteService) {
+        this.turnoService = turnoService;
+        this.odontologoService = odontologoService;
+        this.pacienteService = pacienteService;
+    }
 
     @PostMapping
-    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno){
-        return ResponseEntity.ok(turnoService.registrarTurno(turno));
+    public ResponseEntity<TurnoDTO> registrarTurno(@RequestBody Turno turno){
+        Optional<Paciente> pacienteBuscado = pacienteService.buscarPorId(turno.getPaciente().getId());
+        Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(turno.getOdontologo().getId());
+        if(pacienteBuscado.isPresent() && odontologoBuscado.isPresent()){
+            return ResponseEntity.ok(turnoService.registrarTurno(turno));
+        }
+        return ResponseEntity.badRequest().build();
     }
 
     @GetMapping("/todos")
-    public ResponseEntity<List<Turno>> listarTurnos(){
+    public ResponseEntity<List<TurnoDTO>> listarTurnos(){
         return ResponseEntity.ok(turnoService.listarTurnos());
     }
 
@@ -36,10 +54,11 @@ public class TurnoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Turno>> buscarPorId(@PathVariable Long id){
+    public ResponseEntity<TurnoDTO> buscarPorId(@PathVariable Long id){
         Optional<Turno> turnoBuscado = turnoService.buscarPoId(id);
         if (turnoBuscado.isPresent()){
-            return ResponseEntity.ok(turnoBuscado);
+            Turno turnoConvertido = turnoBuscado.get();
+            return ResponseEntity.ok(turnoService.turnoATurnoDTO(turnoConvertido));
         }
         return ResponseEntity.notFound().build();
     }
