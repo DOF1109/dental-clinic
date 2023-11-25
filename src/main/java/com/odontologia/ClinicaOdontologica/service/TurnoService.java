@@ -1,10 +1,11 @@
 package com.odontologia.ClinicaOdontologica.service;
 
 import com.odontologia.ClinicaOdontologica.dto.TurnoDTO;
+import com.odontologia.ClinicaOdontologica.entity.Odontologo;
+import com.odontologia.ClinicaOdontologica.entity.Paciente;
 import com.odontologia.ClinicaOdontologica.entity.Turno;
 import com.odontologia.ClinicaOdontologica.repository.TurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -21,8 +22,8 @@ public class TurnoService {
         return turnoATurnoDTO(turno);
     }
 
-    public void actualizarTurno(Turno turno){
-        turnoRepository.save(turno);
+    public void actualizarTurno(TurnoDTO turnoDTO){
+        turnoRepository.save(turnoDTOATurno(turnoDTO));
     }
 
     public void eliminarTurno(Long id){
@@ -38,11 +39,14 @@ public class TurnoService {
         return turnoDTOs;
     }
 
-    public Optional<Turno> buscarPoId(Long id){
-        return turnoRepository.findById(id);
+    public Optional<TurnoDTO> buscarPoId(Long id){
+        Optional<Turno> turnoBuscado = turnoRepository.findById(id);
+        if (turnoBuscado.isPresent())
+            return Optional.of(turnoATurnoDTO(turnoBuscado.get()));
+        return Optional.empty();
     }
 
-    public TurnoDTO turnoATurnoDTO(Turno turno){
+    private TurnoDTO turnoATurnoDTO(Turno turno){
         TurnoDTO respuesta= new TurnoDTO();
         respuesta.setId(turno.getId());
         respuesta.setPacienteId(turno.getPaciente().getId());
@@ -51,4 +55,16 @@ public class TurnoService {
         return  respuesta;
     }
 
+    private Turno turnoDTOATurno(TurnoDTO turnoDTO){
+        Turno turno = new Turno();
+        Odontologo odontologo = new Odontologo();
+        Paciente paciente = new Paciente();
+        odontologo.setId(turnoDTO.getOdontologoId());
+        paciente.setId(turnoDTO.getPacienteId());
+        turno.setId(turnoDTO.getId());
+        turno.setFechaTurno(turnoDTO.getFechaTurno());
+        turno.setOdontologo(odontologo);
+        turno.setPaciente(paciente);
+        return turno;
+    }
 }

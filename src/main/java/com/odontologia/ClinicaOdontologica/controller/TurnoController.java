@@ -4,6 +4,8 @@ import com.odontologia.ClinicaOdontologica.dto.TurnoDTO;
 import com.odontologia.ClinicaOdontologica.entity.Odontologo;
 import com.odontologia.ClinicaOdontologica.entity.Paciente;
 import com.odontologia.ClinicaOdontologica.entity.Turno;
+import com.odontologia.ClinicaOdontologica.exception.BadRequestException;
+import com.odontologia.ClinicaOdontologica.exception.ResourceNotFoundException;
 import com.odontologia.ClinicaOdontologica.service.OdontologoService;
 import com.odontologia.ClinicaOdontologica.service.PacienteService;
 import com.odontologia.ClinicaOdontologica.service.TurnoService;
@@ -29,13 +31,12 @@ public class TurnoController {
     }
 
     @PostMapping
-    public ResponseEntity<TurnoDTO> registrarTurno(@RequestBody Turno turno){
+    public ResponseEntity<TurnoDTO> registrarTurno(@RequestBody Turno turno) throws BadRequestException{
         Optional<Paciente> pacienteBuscado = pacienteService.buscarPorId(turno.getPaciente().getId());
         Optional<Odontologo> odontologoBuscado = odontologoService.buscarPorId(turno.getOdontologo().getId());
-        if(pacienteBuscado.isPresent() && odontologoBuscado.isPresent()){
+        if(pacienteBuscado.isPresent() && odontologoBuscado.isPresent())
             return ResponseEntity.ok(turnoService.registrarTurno(turno));
-        }
-        return ResponseEntity.badRequest().build();
+        throw new BadRequestException("No se encontró paciente y/o odontologo");
     }
 
     @GetMapping("/todos")
@@ -44,33 +45,36 @@ public class TurnoController {
     }
 
     @PutMapping
-    public ResponseEntity<String> actualizarTurno(@RequestBody Turno turno){
-        Optional<Turno> turnoBuscado = turnoService.buscarPoId(turno.getId());
+    public ResponseEntity<String> actualizarTurno(@RequestBody TurnoDTO turnoDTO) throws BadRequestException, ResourceNotFoundException {
+        Optional<TurnoDTO> turnoBuscado = turnoService.buscarPoId(turnoDTO.getId());
         if (turnoBuscado.isPresent()){
-            turnoService.actualizarTurno(turno);
-            return ResponseEntity.ok("Turno actualizado");
+            Optional<Paciente> paciente = pacienteService.buscarPorId(turnoDTO.getPacienteId());
+            Optional<Odontologo> odontologo = odontologoService.buscarPorId(turnoDTO.getOdontologoId());
+            if (paciente.isPresent() && odontologo.isPresent()){
+                turnoService.actualizarTurno(turnoDTO);
+                return ResponseEntity.ok("Turno actualizado");
+            }
+            throw new BadRequestException("No se encontró paciente y/o odontologo");
         }
-        return ResponseEntity.notFound().build();
+        throw new ResourceNotFoundException("No se encontró el turno");
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TurnoDTO> buscarPorId(@PathVariable Long id){
-        Optional<Turno> turnoBuscado = turnoService.buscarPoId(id);
-        if (turnoBuscado.isPresent()){
-            Turno turnoConvertido = turnoBuscado.get();
-            return ResponseEntity.ok(turnoService.turnoATurnoDTO(turnoConvertido));
-        }
-        return ResponseEntity.notFound().build();
+    public ResponseEntity<TurnoDTO> buscarPorId(@PathVariable Long id) throws ResourceNotFoundException{
+        Optional<TurnoDTO> turnoBuscado = turnoService.buscarPoId(id);
+        if (turnoBuscado.isPresent())
+            return ResponseEntity.ok(turnoBuscado.get());
+        throw new ResourceNotFoundException("No se encontró el turno");
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarTurno(@PathVariable Long id){
-        Optional<Turno> turnoBuscado = turnoService.buscarPoId(id);
+    public ResponseEntity<String> eliminarTurno(@PathVariable Long id) throws ResourceNotFoundException{
+        Optional<TurnoDTO> turnoBuscado = turnoService.buscarPoId(id);
         if (turnoBuscado.isPresent()){
             turnoService.eliminarTurno(id);
             return ResponseEntity.ok("Turno eliminado");
         }
-        return ResponseEntity.notFound().build();
+        throw new ResourceNotFoundException("No se encontró el turno");
     }
 
 }

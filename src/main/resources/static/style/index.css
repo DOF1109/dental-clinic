@@ -1,3 +1,16 @@
+:root {
+    --bs-primary: #249cbc;
+    --bs-primary-rgb: 36, 156, 188;
+
+    --bs-secondary: #8fd6e9;
+    --bs-secondary-rgb: 143, 214, 233;
+    
+    /*
+    --bs-tertiary-bg: #e6e4ea;
+    --bs-tertiary-bg-rgb: 230, 228, 234;
+    */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

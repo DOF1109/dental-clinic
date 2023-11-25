@@ -14,7 +14,6 @@ import java.util.Set;
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.NONE)
     private Long id;
 
     @Column
