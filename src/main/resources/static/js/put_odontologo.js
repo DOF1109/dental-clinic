@@ -30,9 +30,11 @@ window.addEventListener('load', function () {
         }
 
         fetch(url,settings)
-        .then(response => response.json()) // return the result of parsing the JSON
+        .then(response => {
+            // return the result of parsing the JSON
+            response.json()
+        })
         .then(data => {
-            console.log("Recargué");
             // do something with the data if needed
             location.reload();
         })
@@ -43,14 +45,14 @@ window.addEventListener('load', function () {
 
 })
 
-//Es la funcion que se invoca cuando se hace click sobre el id de una odontologo del listado
-//se encarga de llenar el formulario con los datos de la odontologo
-//que se desea modificar
+// Se invoca al hacer click sobre el id de un odontologo del listado
+// Llena el formulario con los datos del odontologo a modificar
 function findBy(id) {
     const url = '/odontologo'+"/"+id;
     const settings = {
         method: 'GET'
     }
+
     fetch(url,settings)
     .then(response => response.json())
     .then(data => {
@@ -59,8 +61,28 @@ function findBy(id) {
         document.querySelector('#matricula').value = odontologo.matricula;
         document.querySelector('#nombre').value = odontologo.nombre;
         document.querySelector('#apellido').value = odontologo.apellido;
-        //el formulario por default esta oculto y al editar se habilita
+        // El formulario por default esta oculto y al editar se habilita
         document.querySelector('#div_odontologo_updating').style.display = "block";
+    }).catch(error => {
+        alert("Error: " + error);
+    })
+}
+
+// Se invoca al hacer click sobre el boton de eiliminar de un odontologo del listado
+function deleteBy(id) {
+    const url = '/odontologo'+"/"+id;
+    const settings = {
+        method: 'DELETE'
+    }
+
+    fetch(url,settings)
+    .then(response => {
+        // return the result of parsing the JSON
+        response.json()
+    })
+    .then(data => {
+        // do something with the data if needed
+        location.reload();
     }).catch(error => {
         alert("Error: " + error);
     })
