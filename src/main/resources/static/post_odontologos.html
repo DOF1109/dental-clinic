@@ -29,8 +29,8 @@
                         Pacientes
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Alta</a></li>
-                        <li><a class="dropdown-item" href="#">Listar</a></li>
+                        <li><a class="dropdown-item" href="#">Agregar</a></li>
+                        <li><a class="dropdown-item" href="#">Ver lista</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -39,8 +39,8 @@
                         Odontologos
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./post_odontologos.html">Alta</a></li>
-                        <li><a class="dropdown-item" href="./get_odontologos.html">Listar</a></li>
+                        <li><a class="dropdown-item" href="./post_odontologos.html">Agregar</a></li>
+                        <li><a class="dropdown-item" href="./get_odontologos.html">Ver lista</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -50,7 +50,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Solicitar</a></li>
-                        <li><a class="dropdown-item" href="#">Listar</a></li>
+                        <li><a class="dropdown-item" href="#">Ver lista</a></li>
                     </ul>
                 </li>
             </ul>
@@ -59,29 +59,29 @@
 </nav>
 
 <div class="row">
-    <div class="col-sm-5 bg-secondary mx-auto my-4 px-5 rounded">
-        <h2 class="pt-4 pb-1">Agregar Odontologo</h2>
+    <div class="col-sm-4 bg-body-tertiary mx-auto my-4 px-5 rounded-3">
+        <h2 class="pt-4 pb-1">Odontologo</h2>
         <form id="add_new_odontologo" class="d-flex flex-column">
-            <div class="form-group my-3">
+            <div class="form-group my-2">
                 <label class="control-label pb-2" for="matricula">Matricula:</label>
-                <input type="text" class="form-control" id="matricula"
+                <input type="text" class="form-control rounded-3" id="matricula"
                        placeholder="Ingrese la matricula"
                        name="matricula" required></input>
             </div>
-            <div class="form-group my-3">
+            <div class="form-group my-2">
                 <label class="control-label pb-2" for="nombre">Nombre:</label>
-                <input type="text" class="form-control" id="nombre"
+                <input type="text" class="form-control rounded-3" id="nombre"
                        placeholder="Ingrese el nombre"
                        name="nombre" required></input>
             </div>
-            <div class="form-group my-3">
+            <div class="form-group my-2">
                 <label class="control-label pb-2" for="apellido">Apellido:</label>
-                <input type="text" class="form-control" id="apellido"
+                <input type="text" class="form-control rounded-3" id="apellido"
                        placeholder="Ingrese el apellido"
                        name="apellido" required></input>
             </div>
-            <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-success my-3 px-4 rounded-5" id="btn-add-new-guardar">Guardar</button>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-success my-5 px-5 rounded-3" id="btn-add-new-guardar">Agregar</button>
             </div>
         </form>
         <div id="response" style="display:none; margin-top:10px">
