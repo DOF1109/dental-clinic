@@ -11,8 +11,11 @@
     --secondary-color: #29c4e1;
     --secondary-color-rgb: 	41, 196, 225;
 
-    --tertiary-color: #4ecade;
-    --tertiary-color-rgb: 78, 202, 222;
+    --tertiary-color: #dbfaff;
+    --tertiary-color-rgb: 219, 250, 255;
+
+    --bg-button: #2AA4BF;
+    --bg-button-hover: #2a63bf;
 
     --bs-primary: var(--primary-color);
     --bs-primary-rgb: var(--primary-color-rgb);
@@ -31,4 +34,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.btn-primary {
+    background: var(--bg-button);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--bg-button-hover);
 }

@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
             //modificar y mostrar los datos del misma en un formulario.
             let updateButton = '<button' +
                                       ' id=' + '\"' + 'btn_id_' + odontologo.id + '\"' +
-                                      ' type="button" onclick="findBy('+odontologo.id+')" class="btn btn-info btn_id">' +
+                                      ' type="button" onclick="findBy('+odontologo.id+')" class="btn btn-primary btn_id">' +
                                       odontologo.id +
                                       '</button>';
 
