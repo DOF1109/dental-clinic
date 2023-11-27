@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
                 <li class="nav-item me-2">
                     <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
                 </li>
@@ -35,7 +35,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Odontologos
                     </a>
@@ -59,24 +59,22 @@
     </div>
 </nav>
 
-<div class="row">
-    <div id="div_odontologo_table" class="col-sm-9 col-10 mx-auto">
-        <h2 class="my-4">Listado de Odontologos</h2>
-        <div class="table-responsive text-center">
-            <table id="odontologoTable" class="table table-striped table-hover">
-                <thead class="table-light">
-                <tr>
-                    <th>Id</th>
-                    <th>Matricula</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Eliminar</th>
-                </tr>
-                </thead>
-                <tbody id="odontologoTableBody">
-                </tbody>
-            </table>
-        </div>
+<div id="div_odontologo_table" class="col-sm-9 col-10 mx-auto">
+    <h2 class="my-4">Listado de Odontologos</h2>
+    <div class="table-responsive text-center">
+        <table id="odontologoTable" class="table table-striped">
+            <thead class="table-light">
+            <tr>
+                <th>Id</th>
+                <th>Matricula</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Eliminar</th>
+            </tr>
+            </thead>
+            <tbody id="odontologoTableBody">
+            </tbody>
+        </table>
     </div>
 </div>
 
@@ -106,6 +104,30 @@
         <div id="response" style="display:none; margin:10px">
         </div>
     </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#odontologoModal">
+    Editar odontologo
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="odontologoModal" tabindex="-1" aria-labelledby="odontologoModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="odontologoModalLabel">Modificar datos del odontologo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        Acá va el formulario con los datos de la API
+    </div> 
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+    </div>
+    </div>
+</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
