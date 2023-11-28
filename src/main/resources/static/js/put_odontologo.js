@@ -16,8 +16,6 @@ window.addEventListener('load', function () {
             apellido: document.querySelector('#apellido').value,
         };
 
-        // invocamos utilizando la función fetch la API odontologos con el método PUT que modificará
-        // el odontologo que enviaremos en formato JSON
         const url = '/odontologo';
         const settings = {
             method: 'PUT',
@@ -37,7 +35,14 @@ window.addEventListener('load', function () {
             location.reload();
         })
         .catch(error => {
-            console.log("Error: " + error);
+            // Si hay algun error se muestra un mensaje para intentar nuevamente
+            const errorAlert = '<div class="alert alert-danger alert-dismissible" role="alert">' +
+                '<div><strong>Error, intente nuevamente</strong></div>' +
+                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">' +
+                '</button></div>'
+
+            document.querySelector('#response').innerHTML = errorAlert;
+            document.querySelector('#response').style.display = "block";
         })
     })
 

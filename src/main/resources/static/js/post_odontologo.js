@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
         .then(response => response.json())
         .then(data => {
             // Si no hay ningun error se muestra un mensaje de carga correcta
-            let successAlert = '<div class="alert alert-succes alert-dismissible" role="alert">' +
+            const successAlert = '<div class="alert alert-succes alert-dismissible" role="alert">' +
                                 '<div><strong>Odontologo cargado!</strong></div>' +
                                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">' +
                                 '</button></div>'
@@ -39,7 +39,7 @@ window.addEventListener('load', function () {
         })
         .catch(error => {
             // Si hay algun error se muestra un mensaje para intentar nuevamente
-            let errorAlert = '<div class="alert alert-danger alert-dismissible" role="alert">' +
+            const errorAlert = '<div class="alert alert-danger alert-dismissible" role="alert">' +
                                 '<div><strong>Error, intente nuevamente</strong></div>' +
                                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">' +
                                 '</button></div>'
