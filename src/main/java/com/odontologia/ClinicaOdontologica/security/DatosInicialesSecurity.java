@@ -16,13 +16,21 @@ public class DatosInicialesSecurity implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        //crear un usuario como si fuese real
         BCryptPasswordEncoder cifrador= new BCryptPasswordEncoder();
-        String passSinCifrar= "digital";
-        String passCifrado= cifrador.encode(passSinCifrar);
-        System.out.println("password: "+passCifrado);
-        Usuario usuarioInsertar= new Usuario("Jorgito","jpereyra00","jorge.pereyra@digitalhouse.com",passCifrado, UsuarioRole.ROLE_ADMIN);
-        usuarioRepository.save(usuarioInsertar);
+
+        // Creo un usuario ADMIN como si fuese real
+        String passAdminSinCifrar = "digital";
+        String passAdminCifrado = cifrador.encode(passAdminSinCifrar);
+        Usuario usuarioAdmin = new Usuario("Jorgito","jpereyra00",
+                "jorge.pereyra@digitalhouse.com", passAdminCifrado, UsuarioRole.ROLE_ADMIN);
+        usuarioRepository.save(usuarioAdmin);
+
+        // Creo un usuario USER como si fuese real
+        String passUserSinCifrar = "digital";
+        String passUserCifrado = cifrador.encode(passUserSinCifrar);
+        Usuario usuarioUser = new Usuario("Lionel","lio10",
+                "lionel@messi.com", passUserCifrado, UsuarioRole.ROLE_USER);
+        usuarioRepository.save(usuarioUser);
     }
 
 }
