@@ -19,10 +19,10 @@ public class DatosInicialesSecurity implements ApplicationRunner {
         BCryptPasswordEncoder cifrador= new BCryptPasswordEncoder();
 
         // Creo un usuario ADMIN como si fuese real
-        String passAdminSinCifrar = "digital";
+        String passAdminSinCifrar = "admin";
         String passAdminCifrado = cifrador.encode(passAdminSinCifrar);
-        Usuario usuarioAdmin = new Usuario("Jorgito","jpereyra00",
-                "jorge.pereyra@digitalhouse.com", passAdminCifrado, UsuarioRole.ROLE_ADMIN);
+        Usuario usuarioAdmin = new Usuario("admin","admin",
+                "admin@admin.com", passAdminCifrado, UsuarioRole.ROLE_ADMIN);
         usuarioRepository.save(usuarioAdmin);
 
         // Creo un usuario USER como si fuese real

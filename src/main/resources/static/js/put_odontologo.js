@@ -5,7 +5,7 @@ window.addEventListener('load', function () {
     formulario.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        let odontologoId = document.querySelector('#odontologo_id').value;
+        const odontologoId = document.querySelector('#odontologo_id').value;
 
         // JSON con los datos del odontologo, enviamos el id
         //para poder identificarlo y modificarlo
@@ -59,13 +59,14 @@ function findBy(id) {
     fetch(url,settings)
     .then(response => response.json())
     .then(data => {
-        let odontologo = data;
+        const odontologo = data;
         document.querySelector('#odontologo_id').value = odontologo.id;
         document.querySelector('#matricula').value = odontologo.matricula;
         document.querySelector('#nombre').value = odontologo.nombre;
         document.querySelector('#apellido').value = odontologo.apellido;
-        // El formulario por default esta oculto y al editar se habilita
-        document.querySelector('#div_odontologo_updating').style.display = "block";
+        // Acá debo abrir el modal con el formulario y sus datos
+        const odontologoEditModal = document.querySelector('#odontologoEditModal');
+        odontologoEditModal.show();
     }).catch(error => {
         alert("Error: " + error);
     })
