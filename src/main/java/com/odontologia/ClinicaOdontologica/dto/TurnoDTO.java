@@ -10,7 +10,17 @@ import java.time.LocalDate;
 // Clase POJO
 public class TurnoDTO {
     private Long id;
-    private LocalDate fechaTurno;
     private Long pacienteId;
     private Long odontologoId;
+    private LocalDate fechaTurno;
+
+    public TurnoDTO() {
+    }
+
+    public TurnoDTO(Long id, Long pacienteId, Long odontologoId, LocalDate fechaTurno) {
+        this.id = id;
+        this.pacienteId = pacienteId;
+        this.odontologoId = odontologoId;
+        this.fechaTurno = fechaTurno;
+    }
 }

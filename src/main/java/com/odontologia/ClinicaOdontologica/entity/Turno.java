@@ -1,14 +1,14 @@
 package com.odontologia.ClinicaOdontologica.entity;
 
-import lombok.AccessLevel;
-import lombok.Data;
+import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +24,20 @@ public class Turno {
 
     @Column
     private LocalDate fechaTurno;
+
+    public Turno() {
+    }
+
+    public Turno(Paciente paciente, Odontologo odontologo, LocalDate fechaTurno) {
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.fechaTurno = fechaTurno;
+    }
+
+    public Turno(Long id, Paciente paciente, Odontologo odontologo, LocalDate fechaTurno) {
+        this.id = id;
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.fechaTurno = fechaTurno;
+    }
 }
