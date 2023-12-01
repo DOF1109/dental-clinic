@@ -1,11 +1,10 @@
 window.addEventListener('load', function () {
+
     // Formulario con los datos que el usuario pudo haber modificado del odontologo
     const formulario = document.querySelector('#update_odontologo_form');
 
     formulario.addEventListener('submit', function (event) {
         event.preventDefault();
-
-        const odontologoId = document.querySelector('#odontologo_id').value;
 
         // JSON con los datos del odontologo, enviamos el id
         //para poder identificarlo y modificarlo
@@ -27,22 +26,14 @@ window.addEventListener('load', function () {
 
         fetch(url,settings)
         .then(response => {
-            // return the result of parsing the JSON
             response.json()
         })
         .then(data => {
-            // do something with the data if needed
+            showToast('Odontologo actualizado!', true);
             location.reload();
         })
         .catch(error => {
-            // Si hay algun error se muestra un mensaje para intentar nuevamente
-            const errorAlert = '<div class="alert alert-danger alert-dismissible" role="alert">' +
-                '<div><strong>Error, intente nuevamente</strong></div>' +
-                '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">' +
-                '</button></div>'
-
-            document.querySelector('#response').innerHTML = errorAlert;
-            document.querySelector('#response').style.display = "block";
+            showToast('Error, intente nuevamente', false);
         })
     })
 
@@ -51,43 +42,52 @@ window.addEventListener('load', function () {
 // Se invoca al hacer click sobre el id de un odontologo del listado
 // Llena el formulario con los datos del odontologo a modificar
 function findBy(id) {
-    const url = '/odontologo'+"/"+id;
+    const url = '/odontologo/' + id;
     const settings = {
         method: 'GET'
     }
 
     fetch(url,settings)
-    .then(response => response.json())
+    .then(response => {
+        response.json()
+    })
     .then(data => {
         const odontologo = data;
         document.querySelector('#odontologo_id').value = odontologo.id;
         document.querySelector('#matricula').value = odontologo.matricula;
         document.querySelector('#nombre').value = odontologo.nombre;
         document.querySelector('#apellido').value = odontologo.apellido;
-        // Acá debo abrir el modal con el formulario y sus datos
-        const odontologoEditModal = document.querySelector('#odontologoEditModal');
-        odontologoEditModal.show();
+        // Abro el modal con el formulario y sus datos
+        showModal('odontologoEditModal');
     }).catch(error => {
-        alert("Error: " + error);
+        showToast('Error, intente nuevamente', false);
     })
 }
 
-// Se invoca al hacer click sobre el boton de eiliminar de un odontologo del listado
+// Se invoca al hacer click sobre el boton de eliminar de un odontologo del listado
 function deleteBy(id) {
-    const url = '/odontologo'+"/"+id;
-    const settings = {
-        method: 'DELETE'
-    }
+    // Pide confirmación para eliminar
+    showModal('odontologoDeleteModal');
 
-    fetch(url,settings)
-    .then(response => {
-        // return the result of parsing the JSON
-        response.json()
-    })
-    .then(data => {
-        // do something with the data if needed
-        location.reload();
-    }).catch(error => {
-        alert("Error: " + error);
-    })
+    // Si confirma, invoco a la API para eliminar
+    const deleteConfirm = document.querySelector('#deleteConfirm');
+    deleteConfirm.addEventListener(onclick, () => {
+        const url = '/odontologo/' + id;
+        const settings = {
+            method: 'DELETE'
+        }
+    
+        fetch(url,settings)
+        .then(response => {
+            response.json()
+        })
+        .then(data => {
+            showToast('Odontologo eliminado', true);
+            location.reload();
+        })
+        .catch(error => {
+            showToast('Error, intente nuevamente', false);
+        })
+    });
+
 }

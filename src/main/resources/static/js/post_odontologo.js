@@ -26,11 +26,11 @@ window.addEventListener('load', function () {
         .then(response => response.json())
         .then(data => {
             showToast('Odontologo cargado!', true);
+            resetUploadForm();
         })
         .catch(error => {
             showToast('Error, intente nuevamente', false);
         })
-        resetUploadForm();
     });
 
     function resetUploadForm(){

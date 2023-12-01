@@ -30,8 +30,8 @@
                         Pacientes
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Agregar</a></li>
-                        <li><a class="dropdown-item" href="#">Ver lista</a></li>
+                        <li><a class="dropdown-item" href="./post_pacientes.html">Agregar</a></li>
+                        <li><a class="dropdown-item" href="./get_pacientes.html">Ver lista</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -79,11 +79,6 @@
     </div>
 </div>
 
-<!-- Boton para editar odontologo: implementarlo en put_odontologo.js linea 32 -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#odontologoEditModal">
-    Editar odontologo
-</button>
-
 <!-- Modal para editar odontologo -->
 <div class="modal fade" id="odontologoEditModal" tabindex="-1" aria-labelledby="odontologoEditModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -122,32 +117,27 @@
     </div>
 </div>
 
-<!-- Boton para eliminar odontologo -->
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#odontologoDeleteModal">
-    Eliminar odontologo
-</button>
-
 <!-- Modal para eliminar odontologo -->
 <div class="modal fade" id="odontologoDeleteModal" tabindex="-1" aria-labelledby="odontologoDeleteModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-body-tertiary">
-    <div class="modal-header border-0">
-        <h3 class="modal-title fs-4" id="odontologoDeleteModalLabel">¿Seguro que desea eliminar el odontologo?</h3>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-body-tertiary">
+        <div class="modal-header border-0">
+            <h3 class="modal-title fs-4" id="odontologoDeleteModalLabel">¿Seguro que desea eliminar el odontologo?</h3>
+        </div>
+        <div class="modal-footer border-0">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            <button id="deleteConfirm" type="button" class="btn btn-primary">Eliminar</button>
+        </div>
+        </div>
     </div>
-    <div class="modal-footer border-0">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Eliminar</button>
-    </div>
-    </div>
-</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="/js/utils.js"></script>
-<script type="text/javascript" src="/js/get_odontologo.js"></script>
-<script type="text/javascript" src="/js/put_odontologo.js"></script>
+<script type="text/javascript" src="./js/utils.js"></script>
+<script type="text/javascript" src="./js/get_odontologo.js"></script>
+<script type="text/javascript" src="./js/put_odontologo.js"></script>
 </body>
 </html>
