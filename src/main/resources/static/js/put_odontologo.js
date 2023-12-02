@@ -52,8 +52,10 @@ function findBy(id) {
         response.json()
     })
     .then(data => {
+        console.log("antes de cargar datos");
         const odontologo = data;
         document.querySelector('#odontologo_id').value = odontologo.id;
+        console.log("despues de cargar datos");
         document.querySelector('#matricula').value = odontologo.matricula;
         document.querySelector('#nombre').value = odontologo.nombre;
         document.querySelector('#apellido').value = odontologo.apellido;
@@ -71,7 +73,7 @@ function deleteBy(id) {
 
     // Si confirma, invoco a la API para eliminar
     const deleteConfirm = document.querySelector('#deleteConfirm');
-    deleteConfirm.addEventListener(onclick, () => {
+    deleteConfirm.addEventListener('click', () => {
         const url = '/odontologo/' + id;
         const settings = {
             method: 'DELETE'
