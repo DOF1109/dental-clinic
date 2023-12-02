@@ -44,6 +44,7 @@ public class TurnoServiceTest {
 
         Turno turno = new Turno(paciente, odontologo, LocalDate.of(2023, 11, 29));
         turnoService.registrarTurno(turno);
+
         assertEquals(id, turno.getId());
     }
 
