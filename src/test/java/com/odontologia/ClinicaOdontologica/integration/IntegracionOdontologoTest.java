@@ -46,9 +46,6 @@ public class IntegracionOdontologoTest {
     @Test
     @Order(2)
     public void listarTodos() throws Exception{
-        Odontologo odontologo = new Odontologo("MP10", "Lionel", "Messi");
-        odontologoService.registrarOdontologo(odontologo);
-
         MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/odontologo/todos")
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(MockMvcResultMatchers.status().isOk())
