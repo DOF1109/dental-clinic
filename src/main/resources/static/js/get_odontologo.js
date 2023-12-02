@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     }
 
     fetch(url,settings)
-    .then(response => response.json())
+    .then(response => response.json()) // si es GET va en 1 linea
     .then(data => {
         // Recorremos la colección de odontologos del JSON
         for(odontologo of data){

@@ -48,20 +48,17 @@ function findBy(id) {
     }
 
     fetch(url,settings)
-    .then(response => {
-        response.json()
-    })
+    .then(response => response.json()) // si es GET va en 1 linea
     .then(data => {
-        console.log("antes de cargar datos");
         const odontologo = data;
         document.querySelector('#odontologo_id').value = odontologo.id;
-        console.log("despues de cargar datos");
         document.querySelector('#matricula').value = odontologo.matricula;
         document.querySelector('#nombre').value = odontologo.nombre;
         document.querySelector('#apellido').value = odontologo.apellido;
         // Abro el modal con el formulario y sus datos
         showModal('odontologoEditModal');
-    }).catch(error => {
+    })
+    .catch(error => {
         showToast('Error, intente nuevamente', false);
     })
 }
@@ -79,16 +76,21 @@ function deleteBy(id) {
             method: 'DELETE'
         }
     
+        console.log("antes del fetch");
+
         fetch(url,settings)
         .then(response => {
             response.json()
+            console.log("converti a json");
         })
         .then(data => {
+            console.log("la API volvió correcta");
             showToast('Odontologo eliminado', true);
             location.reload();
         })
         .catch(error => {
             showToast('Error, intente nuevamente', false);
+            console.log(error);
         })
     });
 
