@@ -32,14 +32,6 @@ window.addEventListener('load', function () {
                     onclick='findBy("${odontologo.id}")' class="btn btn-primary btn_id"> 
                     ${odontologo.id}</button>`;
 
-            /*
-            let updateButton = '<button' +
-                ' id=' + '\"' + 'btn_id_' + odontologo.id + '\"' +
-                ' type="button" onclick="findBy('+ odontologo.id +')" class="btn btn-primary btn_id">' +
-                odontologo.id +
-                '</button>';
-            */
-
             // Armamos cada columna de la fila
             odontologoRow.innerHTML = `
                 <td>${updateButton}</td>
@@ -48,14 +40,70 @@ window.addEventListener('load', function () {
                 <td class='td_apellido'>${odontologo.apellido.toUpperCase()}</td>
                 <td>${deleteButton}</td>`;
 
-            /*
-            odontologoRow.innerHTML = '<td>' + updateButton + '</td>' +
-                '<td class=\"td_matricula\">' + odontologo.matricula.toUpperCase() + '</td>' +
-                '<td class=\"td_nombre\">' + odontologo.nombre.toUpperCase() + '</td>' +
-                '<td class=\"td_apellido\">' + odontologo.apellido.toUpperCase() + '</td>' +
-                '<td>' + deleteButton + '</td>';
-            */
         };
     })
 
 })
+
+function insertEditModal(){
+    const editModal = document.createElement('div');
+    editModal.innerHTML = `
+        <div class="modal fade" id="odontologoEditModal" tabindex="-1" aria-labelledby="odontologoEditModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content bg-body-tertiary">
+                    <div class="modal-header">
+                        <h3 class="modal-title fs-4" id="odontologoEditModalLabel">Modificar datos del odontologo</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-4">
+                        <form id="update_odontologo_form">
+                            <div class="form-group mb-3">
+                                <label>Id:</label>
+                                <input type="text" class="form-control" id="odontologo_id" readonly>
+                            </div>
+                            <div class="form-group my-3">
+                                <label>Matricula:</label>
+                                <input type="text" class="form-control" placeholder="Ingrese la matricula" id="matricula" required>
+                            </div>
+                            <div class="form-group my-3">
+                                <label>Nombre:</label>
+                                <input type="text" class="form-control" placeholder="Ingrese el nombre" id="nombre" required>
+                            </div>
+                            <div class="form-group my-3">
+                                <label>Apellido:</label>
+                                <input type="text" class="form-control" placeholder="Ingrese el apellido" id="apellido" required>
+                            </div>
+                            <div class="modal-footer border-0 px-0 py-3">
+                                <button id="cancelUpdateModal" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                            </div>
+                        </form>
+                        <div id="responseEdit" style="display:none; margin:10px">
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>`;
+
+    document.body.appendChild(editModal);
+}
+
+function insertDeleteModal(){
+    const deleteModal = document.createElement('div');
+    deleteModal.innerHTML = `
+        <div class="modal fade" id="odontologoDeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="odontologoDeleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-body-tertiary">
+                    <div class="modal-header border-0">
+                        <h3 class="modal-title fs-4" id="odontologoDeleteModalLabel">¿Seguro que desea eliminar el odontologo?</h3>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button id="cancelDeleteModal" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button id="deleteConfirm" type="button" class="btn btn-primary">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+
+    document.body.appendChild(deleteModal);
+}

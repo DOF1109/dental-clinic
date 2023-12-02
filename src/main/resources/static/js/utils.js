@@ -23,8 +23,16 @@ function showToast(message, isSuccess){
 }
 
 // Muestra el modal segun el id pasado por parametro
-function showModal(idModal){
+function showModal(idModal, idBtnCancel){
     const htmlModal = document.querySelector(`#${idModal}`);
     const modalBootstrap = bootstrap.Modal.getOrCreateInstance(htmlModal);
     modalBootstrap.show();
+
+    const btnCancelModal = document.querySelector(`#${idBtnCancel}`);
+    btnCancelModal.addEventListener('click', () => {
+        htmlModal.parentNode.removeChild(htmlModal);
+
+        if (idModal === 'odontologoEditModal') insertEditModal();
+        if (idModal === 'odontologoDeleteModal') insertDeleteModal();
+    });
 }

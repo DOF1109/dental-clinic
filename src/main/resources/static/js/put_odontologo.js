@@ -1,5 +1,8 @@
 window.addEventListener('load', function () {
 
+    insertEditModal();
+    insertDeleteModal();
+
     // Formulario con los datos que el usuario pudo haber modificado del odontologo
     const formulario = document.querySelector('#update_odontologo_form');
 
@@ -27,12 +30,15 @@ window.addEventListener('load', function () {
         fetch(url,settings)
         .then(response => {
             response.json()
+            console.log("convierte json");
         })
         .then(data => {
+            console.log("respuesta correctar");
             showToast('Odontologo actualizado!', true);
             location.reload();
         })
         .catch(error => {
+            console.log(error);
             showToast('Error, intente nuevamente', false);
         })
     })
@@ -56,7 +62,7 @@ function findBy(id) {
         document.querySelector('#nombre').value = odontologo.nombre;
         document.querySelector('#apellido').value = odontologo.apellido;
         // Abro el modal con el formulario y sus datos
-        showModal('odontologoEditModal');
+        showModal('odontologoEditModal', 'cancelUpdateModal');
     })
     .catch(error => {
         showToast('Error, intente nuevamente', false);
@@ -66,7 +72,7 @@ function findBy(id) {
 // Se invoca al hacer click sobre el boton de eliminar de un odontologo del listado
 function deleteBy(id) {
     // Pide confirmación para eliminar
-    showModal('odontologoDeleteModal');
+    showModal('odontologoDeleteModal', 'cancelDeleteModal');
 
     // Si confirma, invoco a la API para eliminar
     const deleteConfirm = document.querySelector('#deleteConfirm');
@@ -81,12 +87,10 @@ function deleteBy(id) {
         fetch(url,settings)
         .then(response => {
             response.json()
-            console.log("converti a json");
         })
         .then(data => {
-            console.log("la API volvió correcta");
-            showToast('Odontologo eliminado', true);
             location.reload();
+            showToast('Odontologo eliminado', true);
         })
         .catch(error => {
             showToast('Error, intente nuevamente', false);
