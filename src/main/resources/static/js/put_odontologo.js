@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     // Formulario con los datos que el usuario pudo haber modificado del odontologo
     const formulario = document.querySelector('#update_odontologo_form');
 
-    formulario.addEventListener('submit', function (event) {
+    formulario.addEventListener('submit', function(event) {
         event.preventDefault();
 
         // JSON con los datos del odontologo, enviamos el id
@@ -28,16 +28,15 @@ window.addEventListener('load', function () {
         }
 
         fetch(url,settings)
-        .then(response => {
-            response.json()
-            console.log("convierte json");
-        })
+        .then(response => response.json())
         .then(data => {
             console.log("respuesta correctar");
+            console.log(data);
             showToast('Odontologo actualizado!', true);
-            location.reload();
+            // location.reload();
         })
         .catch(error => {
+            console.log("error");
             console.log(error);
             showToast('Error, intente nuevamente', false);
         })
@@ -62,9 +61,10 @@ function findBy(id) {
         document.querySelector('#nombre').value = odontologo.nombre;
         document.querySelector('#apellido').value = odontologo.apellido;
         // Abro el modal con el formulario y sus datos
-        showModal('odontologoEditModal', 'cancelUpdateModal');
+        showModal('odontologoEditModal', 'btnCancelUpdateModal');
     })
     .catch(error => {
+        console.log(error);
         showToast('Error, intente nuevamente', false);
     })
 }
@@ -93,8 +93,8 @@ function deleteBy(id) {
             showToast('Odontologo eliminado', true);
         })
         .catch(error => {
-            showToast('Error, intente nuevamente', false);
             console.log(error);
+            showToast('Error, intente nuevamente', false);
         })
     });
 

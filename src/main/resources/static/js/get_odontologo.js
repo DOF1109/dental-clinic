@@ -48,12 +48,11 @@ window.addEventListener('load', function () {
 function insertEditModal(){
     const editModal = document.createElement('div');
     editModal.innerHTML = `
-        <div class="modal fade" id="odontologoEditModal" tabindex="-1" aria-labelledby="odontologoEditModalLabel" aria-hidden="true">
+        <div class="modal fade" id="odontologoEditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="odontologoEditModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content bg-body-tertiary">
                     <div class="modal-header">
                         <h3 class="modal-title fs-4" id="odontologoEditModalLabel">Modificar datos del odontologo</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body px-4">
                         <form id="update_odontologo_form">
@@ -73,14 +72,12 @@ function insertEditModal(){
                                 <label>Apellido:</label>
                                 <input type="text" class="form-control" placeholder="Ingrese el apellido" id="apellido" required>
                             </div>
-                            <div class="modal-footer border-0 px-0 py-3">
-                                <button id="cancelUpdateModal" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                            </div>
                         </form>
-                        <div id="responseEdit" style="display:none; margin:10px">
-                        </div>
                     </div> 
+                    <div class="modal-footer border-0 px-0 py-3">
+                        <button id="btnCancelUpdateModal" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button id="btnConfirmUpdateModal" type="submit" form="update_odontologo_form" class="btn btn-primary">Guardar cambios</button>
+                    </div>
                 </div>
             </div>
         </div>`;
@@ -95,7 +92,7 @@ function insertDeleteModal(){
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content bg-body-tertiary">
                     <div class="modal-header border-0">
-                        <h3 class="modal-title fs-4" id="odontologoDeleteModalLabel">¿Seguro que desea eliminar el odontologo?</h3>
+                        <h3 class="modal-title fs-5" id="odontologoDeleteModalLabel">¿Seguro que desea eliminar el odontologo?</h3>
                     </div>
                     <div class="modal-footer border-0">
                         <button id="cancelDeleteModal" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
