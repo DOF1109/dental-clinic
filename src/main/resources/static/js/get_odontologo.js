@@ -12,8 +12,8 @@ window.addEventListener('load', function () {
         for(odontologo of data){
             // Por cada odontologo armaremos una fila de la tabla
             // Cada fila tendrá un id que nos permitirá actualizar/borrar la fila
-            let table = document.getElementById("odontologoTable");
-            let odontologoRow = table.insertRow();
+            let tableBody = document.getElementById("odontologoTableBody");
+            let odontologoRow = tableBody.insertRow();
             let tr_id = 'tr_' + odontologo.id;
             odontologoRow.id = tr_id;
             odontologoRow.classList.add("align-middle");
