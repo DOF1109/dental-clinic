@@ -28,15 +28,14 @@ window.addEventListener('load', function () {
         }
 
         fetch(url,settings)
-        .then(response => response.json())
+        .then(response => {
+            response.json()
+        })
         .then(data => {
-            console.log("respuesta correctar");
-            console.log(data);
             showToast('Odontologo actualizado!', true);
-            // location.reload();
+            location.reload();
         })
         .catch(error => {
-            console.log("error");
             console.log(error);
             showToast('Error, intente nuevamente', false);
         })

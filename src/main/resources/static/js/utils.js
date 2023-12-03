@@ -34,5 +34,7 @@ function showModal(idModal, idBtnCancel){
 
         if (idModal === 'odontologoEditModal') insertEditModal();
         if (idModal === 'odontologoDeleteModal') insertDeleteModal();
+
+        location.reload();
     });
 }
