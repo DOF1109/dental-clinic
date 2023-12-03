@@ -1,6 +1,6 @@
 package com.odontologia.ClinicaOdontologica.entity;
 
-import lombok.AccessLevel;
+import  lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 

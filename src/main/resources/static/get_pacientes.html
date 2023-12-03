@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Odontologos</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
@@ -16,7 +15,7 @@
         <a class="navbar-brand px-3" href="./index.html">
             <img src="./assets/logo.png" alt="Logo" width="120" height="65" class="d-inline-block align-text-top">
         </a>
-        <button class="navbar-toggler" type=visua"button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,19 +58,24 @@
         </div>
     </div>
 </nav>
+<!-- Tabla de pacientes -->
 
-<!-- Tabla de odontologos -->
-<div id="div_odontologo_table" class="col-sm-9 col-10 mx-auto">
-    <h2 class="my-4">Listado de Odontologos</h2>
+<div id="div_paciente_table" class="col-sm-9 col-10 mx-auto">
+    <h2 class="my-4">Listado de Pacientes</h2>
     <div class="table-responsive text-center">
-        <table id="odontologoTable" class="table table-striped">
+        <table id="pacienteTable" class="table table-striped">
             <thead class="table-light">
             <tr>
                 <th>Id</th>
-                <th>Matricula</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
-                <th>Eliminar</th>
+                <th>Cedula</th>
+                <th>Fecha de ingreso</th>
+                <th>Calle</th>
+                <th>Número</th>
+                <th>Localidad</th>
+                <th>Provincia</th>
+                <th>Email</th>
             </tr>
             </thead>
             <tbody id="odontologoTableBody">
