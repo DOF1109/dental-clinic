@@ -16,6 +16,7 @@ window.addEventListener('load', function () {
             let odontologoRow = table.insertRow();
             let tr_id = 'tr_' + odontologo.id;
             odontologoRow.id = tr_id;
+            odontologoRow.classList.add("align-middle");
 
             // Creamos un boton delete para poder eliminar la fila
             // Este invoca a deleteBy que llama a la API para eliminar un odontologo
