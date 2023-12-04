@@ -19,9 +19,6 @@ window.addEventListener('load', function () {
             email: document.querySelector('#email').value,
         };
 
-        console.log('Fecha de ingreso ' + document.querySelector('#fechaIngreso').value);
-        console.log('Numero ' + document.querySelector('#numero').value);
-
         const url = '/paciente';
         const settings = {
             method: 'POST',
@@ -38,6 +35,7 @@ window.addEventListener('load', function () {
             resetUploadForm();
         })
         .catch(error => {
+            console.log(error);
             showToast('Error, intente nuevamente', false);
         })
     });
