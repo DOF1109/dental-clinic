@@ -17,10 +17,14 @@ public class PacienteController {
     private PacienteService pacienteService;
 
     @PostMapping
-    public ResponseEntity<Paciente> registrarPaciente(@RequestBody Paciente paciente){
+    public ResponseEntity<Paciente> registrarPaciente(@RequestBody Paciente paciente) {
+        Optional<Paciente> pacienteExistente = pacienteService.buscarPorEmail(paciente.getEmail());
+        if (pacienteExistente.isPresent()) {
+            // Ya existe un paciente con el mismo email
+            return ResponseEntity.badRequest().body(null);
+        }
         return ResponseEntity.ok(pacienteService.registrarPaciente(paciente));
     }
-
     @GetMapping("/todos")
     public ResponseEntity<List<Paciente>> listarPacientes(){
         return ResponseEntity.ok(pacienteService.listarPacientes());
