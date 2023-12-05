@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
         // JSON con los datos del paciente, enviamos el id
         //para poder identificarlo y modificarlo
         const formData = {
-            id: document.querySelector('#paciente_id'),
+            id: document.querySelector('#paciente_id').value,
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value,
             cedula: document.querySelector('#cedula').value,
