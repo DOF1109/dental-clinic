@@ -10,7 +10,6 @@ window.addEventListener('load', function () {
     .then(data => {
         // Recorremos la colección de turnos del JSON
         for(turno of data){
-            console.log(turno);
             // Por cada turno armaremos una fila de la tabla
             // Cada fila tendrá un id que nos permitirá actualizar/borrar la fila
             let tableBody = document.getElementById("turnoTableBody");
@@ -34,16 +33,13 @@ window.addEventListener('load', function () {
                     onclick='findBy("${turno.id}")' class="btn btn-primary btn_id"> 
                     ${turno.id}</button>`;
 
-            console.log("celuda del paciente");
-            console.log(turno.pacienteCeluda.toUpperCase());
-
             // Armamos cada columna de la fila
             turnoRow.innerHTML = `
                 <td>${updateButton}</td>
                 <td>${turno.odontologoMatricula.toUpperCase()}</td>
                 <td>${turno.odontologoNombre.toUpperCase()}</td>
                 <td>${turno.odontologoApellido.toUpperCase()}</td>
-                <td>${turno.pacienteCeluda.toUpperCase()}</td>
+                <td>${turno.pacienteCedula.toUpperCase()}</td>
                 <td>${turno.pacienteNombre.toUpperCase()}</td>
                 <td>${turno.pacienteApellido.toUpperCase()}</td>
                 <td>${turno.fechaTurno}</td>
