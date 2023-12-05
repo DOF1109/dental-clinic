@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Odontologos</title>
+    <meta charset="utf-8">
+    <title>Turnos</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
@@ -35,7 +36,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Odontologos
                     </a>
@@ -45,7 +46,7 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Turnos
                     </a>
@@ -58,28 +59,26 @@
         </div>
     </div>
 </nav>
-<!-- Tabla de pacientes -->
 
-<div id="div_paciente_table" class="col-sm-9 col-10 mx-auto">
-    <h2 class="my-4">Listado de Pacientes</h2>
+<!-- Tabla de turnos -->
+<div id="div_turno_table" class="col-sm-11 col-11 mx-auto">
+    <h2 class="my-4">Listado de Turnos</h2>
     <div class="table-responsive text-center">
-        <table id="pacienteTable" class="table table-striped">
+        <table id="turnoTable" class="table table-striped table-hover">
             <thead class="table-light">
             <tr>
                 <th>Id</th>
+                <th>Matricula</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
-                <th>Cedula</th>
-                <th>Fecha de ingreso</th>
-                <th>Calle</th>
-                <th>Número</th>
-                <th>Localidad</th>
-                <th>Provincia</th>
-                <th>Email</th>
+                <th>Cedula pac.</th>
+                <th>Nombre pac.</th>
+                <th>Apellido pac.</th>
+                <th>Fecha turno</th>
                 <th>Eliminar</th>
             </tr>
             </thead>
-            <tbody id="pacienteTableBody">
+            <tbody id="turnoTableBody">
             </tbody>
         </table>
     </div>
@@ -90,7 +89,7 @@
     crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="./js/utils.js"></script>
-<script type="text/javascript" src="./js/get_paciente.js"></script>
-<script type="text/javascript" src="./js/put_paciente.js"></script>
+<script type="text/javascript" src="./js/get_turno.js"></script>
+<!-- <script type="text/javascript" src="./js/put_turno.js"></script> -->
 </body>
 </html>

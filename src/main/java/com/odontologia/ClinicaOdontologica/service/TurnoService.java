@@ -50,7 +50,13 @@ public class TurnoService {
         TurnoDTO respuesta= new TurnoDTO();
         respuesta.setId(turno.getId());
         respuesta.setPacienteId(turno.getPaciente().getId());
+        respuesta.setPacienteNombre(turno.getPaciente().getNombre());
+        respuesta.setPacienteApellido(turno.getPaciente().getApellido());
+        respuesta.setPacienteCedula(turno.getPaciente().getCedula());
         respuesta.setOdontologoId(turno.getOdontologo().getId());
+        respuesta.setOdontologoMatricula(turno.getOdontologo().getMatricula());
+        respuesta.setOdontologoNombre(turno.getOdontologo().getNombre());
+        respuesta.setOdontologoApellido(turno.getOdontologo().getApellido());
         respuesta.setFechaTurno(turno.getFechaTurno());
         return  respuesta;
     }

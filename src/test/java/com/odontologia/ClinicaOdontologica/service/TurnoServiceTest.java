@@ -69,7 +69,10 @@ public class TurnoServiceTest {
         Long id = 1L;
         LocalDate expectedDate = LocalDate.of(2024, 1, 1);
 
-        TurnoDTO turnoActualizar = new TurnoDTO(id, id, id, LocalDate.of(2024, 1, 1));
+        TurnoDTO turnoActualizar = new TurnoDTO(id, id, "Dibu",
+                "Martinez", "Arg23", id,
+                "MP10", "Lionel",
+                "Messi", LocalDate.of(2024, 1, 1));
 
         turnoService.actualizarTurno(turnoActualizar);
         Optional<TurnoDTO> turnoBuscado = turnoService.buscarPoId(id);
