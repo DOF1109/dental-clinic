@@ -3,8 +3,10 @@ window.addEventListener('load', function () {
     insertEditModal();
     insertDeleteModal();
 
-    cargarSelectPacientes("");
-    cargarSelectOdontologos("");
+    // cargarSelectPacientes("");
+    // cargarSelectOdontologos("");
+
+    console.log(document.getElementById('selectPacientes'));
 
     // Variable con los datos del turno obtenidos del findBy
     let turno;

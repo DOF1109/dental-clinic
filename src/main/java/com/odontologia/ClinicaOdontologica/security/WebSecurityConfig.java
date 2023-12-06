@@ -39,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
              .authorizeRequests()
              .antMatchers("/get_odontologos.html").hasAnyRole("USER", "ADMIN")
              .antMatchers("/post_odontologos.html").hasRole("ADMIN")
+             .antMatchers("/h2-console/**").permitAll()  // Permitir todas las solicitudes a /h2-console/**
              .anyRequest()
              .authenticated()
              .and()
@@ -50,7 +51,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                  .logoutUrl("/logout") // URL para enviar la solicitud de cierre de sesión
                  .logoutSuccessUrl("/login") // Redirección después de cerrar sesión con éxito
                  .invalidateHttpSession(true) // Invalida la sesión HTTP existente
-                 .deleteCookies("JSESSIONID"); // Elimina cookies específicas al cerrar sesión;
+                 .deleteCookies("JSESSIONID") // Elimina cookies específicas al cerrar sesión
+            .and()
+                .headers().frameOptions().disable();  // Permitir que la consola de H2 se muestre en un marco
     }
 
 }

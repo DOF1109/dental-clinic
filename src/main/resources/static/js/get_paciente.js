@@ -10,8 +10,6 @@ const url = '/paciente/todos';
     .then(data => {
         // Recorremos la colección de pacientes del JSON
         for(paciente of data){
-            console.log("mostrar paciente");
-            console.log(paciente);
             // Por cada paciente armaremos una fila de la tabla
             // Cada fila tendrá un id que nos permitirá actualizar/borrar la fila
             let tableBody = document.getElementById("pacienteTableBody");
