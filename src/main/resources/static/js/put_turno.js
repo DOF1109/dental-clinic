@@ -65,7 +65,9 @@ function findBy(id) {
     fetch(url,settings)
     .then(response => response.json()) // si es GET va en 1 linea
     .then(data => {
+        console.log(data);
         turno = data;
+        console.log(turno);
         cargarSelectPacientes(turno.pacienteId);
         cargarSelectOdontologos(turno.odontologoId);
         // Abro el modal con el formulario y sus datos

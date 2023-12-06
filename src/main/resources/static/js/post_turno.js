@@ -13,17 +13,21 @@ window.addEventListener('load', function() {
         const selectPacientes = document.getElementById('selectPacientes');
         const selectedOptionPacientes = selectPacientes.options[selectPacientes.selectedIndex];
 
+        const pacienteId = selectedOptionPacientes.value.split(";")[0];
+
         // Obtengo el odontologo seleccionado
         const selectOdontologos = document.getElementById('selectOdontologos');
         const selectedOptionOdontologos = selectOdontologos.options[selectOdontologos.selectedIndex];
 
+        const odontologoId = selectedOptionOdontologos.value.split(";")[0];
+
         // JSON con los datos del turno
         const formData = {
             paciente: {
-                id: selectedOptionPacientes.value
+                id: pacienteId
             },
             odontologo: {
-                id: selectedOptionOdontologos.value
+                id: odontologoId
             },
             fechaTurno: document.getElementById('fechaTurno').value,
         };
