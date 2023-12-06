@@ -3,6 +3,9 @@ window.addEventListener('load', function () {
     insertEditModal();
     insertDeleteModal();
 
+    cargarSelectPacientes("");
+    cargarSelectOdontologos("");
+
     // Variable con los datos del turno obtenidos del findBy
     let turno;
 
@@ -65,11 +68,9 @@ function findBy(id) {
     fetch(url,settings)
     .then(response => response.json()) // si es GET va en 1 linea
     .then(data => {
-        console.log(data);
         turno = data;
-        console.log(turno);
-        cargarSelectPacientes(turno.pacienteId);
-        cargarSelectOdontologos(turno.odontologoId);
+        // cargarSelectPacientes(turno.pacienteId);
+        // cargarSelectOdontologos(turno.odontologoId);
         // Abro el modal con el formulario y sus datos
         showModal('turnoEditModal', 'btnCancelUpdateModal');
     })
@@ -77,6 +78,7 @@ function findBy(id) {
         console.log(error);
         showToast('Error, intente nuevamente', false);
     })
+
 }
 
 // Se invoca al hacer click sobre el boton de eliminar de un turno del listado

@@ -43,8 +43,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
              .authenticated()
              .and()
              .formLogin()
+                //.loginPage("/login.html") // Especifica la URL de tu formulario de inicio de sesión personalizado
+                //.permitAll() // Permite que todos puedan acceder a la página de inicio de sesión
              .and()
-             .logout();
+             .logout()
+                 .logoutUrl("/logout") // URL para enviar la solicitud de cierre de sesión
+                 .logoutSuccessUrl("/login") // Redirección después de cerrar sesión con éxito
+                 .invalidateHttpSession(true) // Invalida la sesión HTTP existente
+                 .deleteCookies("JSESSIONID"); // Elimina cookies específicas al cerrar sesión;
     }
 
 }

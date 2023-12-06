@@ -12,11 +12,11 @@
 <body class="vh-100 d-flex align-items-center bg-body-tertiary">
 
 <main class="form-signin col-3 m-auto pb-5">
-    <form id="formSignIn">
+    <form id="formSignIn" method="post" action="/login">
         <img class="mb-4 d-block mx-auto" src="./assets/logo.png" alt="" width="170" height="100">
         <div class="form-floating">
-            <input id="email" type="email" class="form-control" placeholder="name@example.com" required>
-            <label for="email">Dirección de email</label>
+            <input id="username" type="email" class="form-control" placeholder="name@example.com" required>
+            <label for="username">Dirección de email</label>
         </div>
         <div class="form-floating mb-3">
             <input id="password" type="password" class="form-control" placeholder="Contraseña" required>
