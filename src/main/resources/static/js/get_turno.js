@@ -67,13 +67,13 @@ function insertEditModal(){
                             <div class="form-group my-3">
                                 <label class="control-label pb-2">Paciente:</label>
                                 <select id="selectPacientes" class="form-select" aria-label="select paciente" required>
-                                    <option selected disabled value="">Seleccionar paciente</option>
+                                    <option disabled value="">Seleccionar paciente</option>
                                 </select>
                             </div>
                             <div class="form-group my-3">
                                 <label class="control-label pb-2">Odontologo:</label>
                                 <select id="selectOdontologos" class="form-select" aria-label="select odontologo" required>
-                                    <option selected disabled value="">Seleccionar odontologo</option>
+                                    <option disabled value="">Seleccionar odontologo</option>
                                 </select>
                             </div>
                             <div class="form-group my-3">

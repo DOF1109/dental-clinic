@@ -1,4 +1,4 @@
-// Muestra un mensaje toast de éxito o error
+/********** Muestra un mensaje toast de éxito o error **********/
 // isSucces es true para un menesaje de éxito y false para error
 function showToast(message, isSuccess){
     // El color de fondo depende si es exitoso o no el mensaje a mostrar
@@ -22,7 +22,8 @@ function showToast(message, isSuccess){
     toastBootstrap.show();
 }
 
-// Muestra el modal segun el id pasado por parametro
+
+/********** Muestra el modal segun el id pasado por parametro **********/
 function showModal(idModal, idBtnCancel){
     const htmlModal = document.querySelector(`#${idModal}`);
     const modalBootstrap = bootstrap.Modal.getOrCreateInstance(htmlModal);
@@ -36,5 +37,75 @@ function showModal(idModal, idBtnCancel){
         if (idModal === 'odontologoDeleteModal') insertDeleteModal();
 
         location.reload();
+    });
+}
+
+
+/********** Carga los pacientes de la BBDD en las opciones del select **********/
+function cargarSelectPacientes(idSelected) {
+    const urlListarPacientes = '/paciente/todos';
+    const settings = {
+        method: 'GET'
+    }
+
+    fetch(urlListarPacientes, settings)
+    .then(response => response.json()) // si es GET va en 1 linea
+    .then(data => {
+        const selectPacientes = document.getElementById("selectPacientes");
+
+        // Recorremos la colección de pacientes del JSON
+        for(paciente of data){
+            // Por cada paciente armaremos una fila del select
+            const pacienteOption = document.createElement("option");
+            pacienteOption.value = `${paciente.id};${paciente.nombre};${paciente.apellido};${paciente.cedula}`;
+            pacienteOption.text = paciente.cedula + " - " +
+                paciente.nombre + " " + 
+                paciente.apellido;
+                
+            if (idSelected == paciente.id) 
+                pacienteOption.selected = true;
+
+            selectPacientes.appendChild(pacienteOption);
+        };
+
+    })
+    .catch(error => {
+        console.log(error);
+        showToast('Error, actualice la página', false);
+    });
+}
+
+
+/********** Carga los odontologos de la BBDD en las opciones del select **********/
+function cargarSelectOdontologos(idSelected) {
+    const urlListarOdontologos = '/odontologo/todos';
+    const settings = {
+        method: 'GET'
+    }
+
+    fetch(urlListarOdontologos, settings)
+    .then(response => response.json()) // si es GET va en 1 linea
+    .then(data => {
+        const selectOdontologos = document.getElementById("selectOdontologos");
+
+        // Recorremos la colección de odontologos del JSON
+        for(odontologo of data){
+            // Por cada odontologo armaremos una fila del select    
+            const odontologoOption = document.createElement("option");
+            // odontologoOption.value = JSON.stringify(odontologo);
+            odontologoOption.value = `${odontologo.id};${odontologo.matricula};${odontologo.nombre};${odontologo.apellido}`;
+            odontologoOption.text = odontologo.matricula + " - " +
+                odontologo.nombre + " " + 
+                odontologo.apellido;
+
+            if (idSelected == odontologo.id) 
+                odontologoOption.selected = true;
+            
+            selectOdontologos.appendChild(odontologoOption);
+        };
+    })
+    .catch(error => {
+        console.log(error);
+        showToast('Error, actualice la página', false);
     });
 }

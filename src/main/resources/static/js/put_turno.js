@@ -3,25 +3,30 @@ window.addEventListener('load', function () {
     insertEditModal();
     insertDeleteModal();
 
+    // Variable con los datos del turno obtenidos del findBy
+    let turno;
+
     // Formulario con los datos que el usuario pudo haber modificado del turno
     const formulario = document.querySelector('#update_turno_form');
-
+    
     formulario.addEventListener('submit', function(event) {
         event.preventDefault();
+        
+        const pacienteSeleccionado = document.getElementById("selectPacientes").value.split(';');
+        const odontologoSeleccionado = document.getElementById("selectOdontologos").value.split(';');
 
-        // JSON con los datos del turno, enviamos el id
-        //para poder identificarlo y modificarlo
+        // JSON con los datos del turno
         const formData = {
-            id: document.querySelector('#turno_id').value,
-            pacienteId: document.querySelector('#').value,
-            pacienteNombre: document.querySelector('#').value,
-            pacienteApellido: document.querySelector('#').value,
-            pacienteCedula: document.querySelector('#').value,
-            odontologoId: document.querySelector('#').value,
-            odontologoMatricula: document.querySelector('#').value,
-            odontologoNombre: document.querySelector('#').value,
-            odontologoApellido: document.querySelector('#').value,
-            fechaTurno: document.querySelector('#').value,
+            id: turno.id,
+            pacienteId: pacienteSeleccionado[0],
+            pacienteNombre: pacienteSeleccionado[1],
+            pacienteApellido: pacienteSeleccionado[2],
+            pacienteCedula: pacienteSeleccionado[3],
+            odontologoId: odontologoSeleccionado[0],
+            odontologoMatricula: odontologoSeleccionado[1],
+            odontologoNombre: odontologoSeleccionado[2],
+            odontologoApellido: odontologoSeleccionado[3],
+            fechaTurno: document.getElementById('fechaTurno').value,
         };
 
         const url = '/turno';
@@ -60,11 +65,9 @@ function findBy(id) {
     fetch(url,settings)
     .then(response => response.json()) // si es GET va en 1 linea
     .then(data => {
-        const turno = data;
-        document.querySelector('#turno_id').value = turno.id;
-        document.querySelector('#matricula').value = turno.matricula;
-        document.querySelector('#nombre').value = turno.nombre;
-        document.querySelector('#apellido').value = turno.apellido;
+        turno = data;
+        cargarSelectPacientes(turno.pacienteId);
+        cargarSelectOdontologos(turno.odontologoId);
         // Abro el modal con el formulario y sus datos
         showModal('turnoEditModal', 'btnCancelUpdateModal');
     })
@@ -86,8 +89,6 @@ function deleteBy(id) {
         const settings = {
             method: 'DELETE'
         }
-    
-        console.log("antes del fetch");
 
         fetch(url,settings)
         .then(response => {
