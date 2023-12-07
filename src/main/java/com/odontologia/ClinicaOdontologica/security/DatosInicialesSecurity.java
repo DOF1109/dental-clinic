@@ -26,10 +26,10 @@ public class DatosInicialesSecurity implements ApplicationRunner {
         usuarioRepository.save(usuarioAdmin);
 
         // Creo un usuario USER como si fuese real
-        String passUserSinCifrar = "digital";
+        String passUserSinCifrar = "usuario";
         String passUserCifrado = cifrador.encode(passUserSinCifrar);
-        Usuario usuarioUser = new Usuario("Lionel","lio10",
-                "lionel@messi.com", passUserCifrado, UsuarioRole.ROLE_USER);
+        Usuario usuarioUser = new Usuario("usuario","usuario",
+                "usuario@usuario.com", passUserCifrado, UsuarioRole.ROLE_USER);
         usuarioRepository.save(usuarioUser);
     }
 

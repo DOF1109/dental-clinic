@@ -1,3 +1,23 @@
+/********** Mostrar u ocultar items segun rol en el menu **********/
+function hideMenu() {
+    const url = '/usuario';
+    const settings = {
+        method: 'GET'
+    }
+
+    fetch(url,settings)
+    .then(response => response.json()) // si es GET va en 1 linea
+    .then(data => {
+        if (data.rol === 'ROLE_USER') {
+            this.document.getElementById('pacienteIdLi').classList.add('d-none');
+            this.document.getElementById('odontologoIdLi').classList.add('d-none');
+        }
+    });
+}
+
+hideMenu();
+
+
 /********** Muestra un mensaje toast de éxito o error **********/
 // isSucces es true para un menesaje de éxito y false para error
 function showToast(message, isSuccess){
@@ -41,14 +61,14 @@ function showModal(idModal, idBtnCancel){
 }
 
 
-/********** Carga los pacientes de la BBDD en las opciones del select **********/
+/********** Carga y retorna los pacientes de la BBDD en las opciones del select **********/
 function cargarSelectPacientes(idSelected) {
     const urlListarPacientes = '/paciente/todos';
     const settings = {
         method: 'GET'
     }
 
-    fetch(urlListarPacientes, settings)
+    return fetch(urlListarPacientes, settings)
     .then(response => response.json()) // si es GET va en 1 linea
     .then(data => {
         const selectPacientes = document.getElementById("selectPacientes");
@@ -67,23 +87,25 @@ function cargarSelectPacientes(idSelected) {
 
             selectPacientes.appendChild(pacienteOption);
         };
-
+        // Devuelvo los pacientes cargados en la BBDD
+        return data;
     })
     .catch(error => {
         console.log(error);
         showToast('Error, actualice la página', false);
+        return null;
     });
 }
 
 
-/********** Carga los odontologos de la BBDD en las opciones del select **********/
+/********** Carga y retorna los odontologos de la BBDD en las opciones del select **********/
 function cargarSelectOdontologos(idSelected) {
     const urlListarOdontologos = '/odontologo/todos';
     const settings = {
         method: 'GET'
     }
 
-    fetch(urlListarOdontologos, settings)
+    return fetch(urlListarOdontologos, settings)
     .then(response => response.json()) // si es GET va en 1 linea
     .then(data => {
         const selectOdontologos = document.getElementById("selectOdontologos");
@@ -92,7 +114,6 @@ function cargarSelectOdontologos(idSelected) {
         for(odontologo of data){
             // Por cada odontologo armaremos una fila del select    
             const odontologoOption = document.createElement("option");
-            // odontologoOption.value = JSON.stringify(odontologo);
             odontologoOption.value = `${odontologo.id};${odontologo.matricula};${odontologo.nombre};${odontologo.apellido}`;
             odontologoOption.text = odontologo.matricula + " - " +
                 odontologo.nombre + " " + 
@@ -103,9 +124,13 @@ function cargarSelectOdontologos(idSelected) {
             
             selectOdontologos.appendChild(odontologoOption);
         };
+
+        // Devuelvo los odontologos cargados en la BBDD
+        return data;
     })
     .catch(error => {
         console.log(error);
         showToast('Error, actualice la página', false);
+        return null;
     });
 }

@@ -105,7 +105,7 @@ function insertEditModal(){
                     </div>
                 </form>
             </div> 
-            <div class="modal-footer border-0 px-0 py-3">
+            <div class="modal-footer border-0 px-4 py-3">
                 <button id="btnCancelUpdateModal" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 <button id="btnConfirmUpdateModal" type="submit" form="update_paciente_form" class="btn btn-primary">Guardar cambios</button>
             </div>

@@ -22,4 +22,5 @@ public class UsuarioService implements UserDetailsService {
             return usuarioBuscado.get();
         throw new UsernameNotFoundException("No se encontró el usuario");
     }
+
 }

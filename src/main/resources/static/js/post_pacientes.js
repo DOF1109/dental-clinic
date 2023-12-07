@@ -37,8 +37,7 @@ window.addEventListener('load', function () {
             resetUploadForm();
         })
         .catch(error => {
-            console.log(error);
-            showToast('Error, intente nuevamente', false);
+            showToast('Error, el email ya está registrado', false);
         })
     });
 

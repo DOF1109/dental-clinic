@@ -3,11 +3,6 @@ window.addEventListener('load', function () {
     insertEditModal();
     insertDeleteModal();
 
-    // cargarSelectPacientes("");
-    // cargarSelectOdontologos("");
-
-    console.log(document.getElementById('selectPacientes'));
-
     // Variable con los datos del turno obtenidos del findBy
     let turno;
 
@@ -16,13 +11,13 @@ window.addEventListener('load', function () {
     
     formulario.addEventListener('submit', function(event) {
         event.preventDefault();
-        
+
         const pacienteSeleccionado = document.getElementById("selectPacientes").value.split(';');
         const odontologoSeleccionado = document.getElementById("selectOdontologos").value.split(';');
 
         // JSON con los datos del turno
         const formData = {
-            id: turno.id,
+            id: document.getElementById('turno_id').value,
             pacienteId: pacienteSeleccionado[0],
             pacienteNombre: pacienteSeleccionado[1],
             pacienteApellido: pacienteSeleccionado[2],
@@ -71,8 +66,10 @@ function findBy(id) {
     .then(response => response.json()) // si es GET va en 1 linea
     .then(data => {
         turno = data;
-        // cargarSelectPacientes(turno.pacienteId);
-        // cargarSelectOdontologos(turno.odontologoId);
+        cargarSelectPacientes(turno.pacienteId);
+        cargarSelectOdontologos(turno.odontologoId);
+        document.getElementById('turno_id').value = turno.id;
+        document.getElementById('fechaTurno').value = turno.fechaTurno;
         // Abro el modal con el formulario y sus datos
         showModal('turnoEditModal', 'btnCancelUpdateModal');
     })

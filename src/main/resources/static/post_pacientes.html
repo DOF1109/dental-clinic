@@ -24,8 +24,8 @@
                 <li class="nav-item me-2">
                     <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                <li id="pacienteIdLi" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Pacientes
                     </a>
@@ -34,7 +34,7 @@
                         <li><a class="dropdown-item" href="./get_pacientes.html">Ver lista</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
+                <li id="odontologoIdLi" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Odontologos
@@ -53,6 +53,11 @@
                         <li><a class="dropdown-item" href="./post_turnos.html">Solicitar</a></li>
                         <li><a class="dropdown-item" href="./get_turnos.html">Ver lista</a></li>
                     </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="./logout" role="button">
+                        Cerrar sesión
+                    </a>
                 </li>
             </ul>
         </div>

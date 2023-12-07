@@ -1,7 +1,16 @@
 window.addEventListener('load', function() {
 
-    cargarSelectPacientes("");
-    cargarSelectOdontologos("");
+    // Cargo y obtengo los pacientes del select
+    let pacientesArray;
+    cargarSelectPacientes("").then(data => {
+        pacientesArray = data;
+    });
+
+    // Cargo y obtengo los odontologos del select
+    let odontologosArray;
+    cargarSelectOdontologos("").then(data => {
+        odontologosArray = data;
+    });
 
     // Formulario donde el usuario cargará el nuevo turno
     const formulario = document.querySelector('#add_new_turno');
@@ -13,22 +22,18 @@ window.addEventListener('load', function() {
         const selectPacientes = document.getElementById('selectPacientes');
         const selectedOptionPacientes = selectPacientes.options[selectPacientes.selectedIndex];
 
-        const pacienteId = selectedOptionPacientes.value.split(";")[0];
+        const pacienteSelectedId = selectedOptionPacientes.value.split(";")[0];
 
         // Obtengo el odontologo seleccionado
         const selectOdontologos = document.getElementById('selectOdontologos');
         const selectedOptionOdontologos = selectOdontologos.options[selectOdontologos.selectedIndex];
 
-        const odontologoId = selectedOptionOdontologos.value.split(";")[0];
+        const odontologoSelectedId = selectedOptionOdontologos.value.split(";")[0];
 
         // JSON con los datos del turno
         const formData = {
-            paciente: {
-                id: pacienteId
-            },
-            odontologo: {
-                id: odontologoId
-            },
+            paciente: pacientesArray.find(paciente => paciente.id == pacienteSelectedId),
+            odontologo: odontologosArray.find(odontologo => odontologo.id == odontologoSelectedId),
             fechaTurno: document.getElementById('fechaTurno').value,
         };
 
